@@ -127,7 +127,7 @@ class NAV extends Component {
                     <div className="item_point" onClick={() => this.nav("technical")}>
                         <div className="blob" id="technical_blob"></div>
                         <div className="item">
-                            Technical
+                            Technical skills
                         </div>
                     </div>
 
