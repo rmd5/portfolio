@@ -5,6 +5,8 @@ import profile from "../../img/profile.jpg";
 import EDUCATION from '../sections/education/education';
 import TECHNICAL from '../sections/technical/technical';
 import NAV from '../navigation/nav';
+import SKILLS from '../sections/skills/skills';
+import INTERESTS from '../sections/interests/interests';
 
 class MAIN extends Component {
     render() {
@@ -32,6 +34,8 @@ class MAIN extends Component {
                     <EXPERIENCE />
                     <EDUCATION />
                     <TECHNICAL />
+                    <SKILLS />
+                    <INTERESTS />
 
                     <div className="footer"></div>
 

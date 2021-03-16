@@ -22,6 +22,8 @@ class NAV extends Component {
             document.getElementById("experience_blob").style.visibility = "";
             document.getElementById("education_blob").style.visibility = "";
             document.getElementById("technical_blob").style.visibility = "";
+            document.getElementById("skills_blob").style.visibility = "";
+            document.getElementById("interests_blob").style.visibility = "";
         } else {
             document.getElementById("biography_blob").style.visibility = "";
 
@@ -29,19 +31,38 @@ class NAV extends Component {
                 document.getElementById("experience_blob").style.visibility = "visible";
                 document.getElementById("education_blob").style.visibility = "";
                 document.getElementById("technical_blob").style.visibility = "";
+                document.getElementById("skills_blob").style.visibility = "";
+                document.getElementById("interests_blob").style.visibility = "";
             } else {
                 document.getElementById("experience_blob").style.visibility = "";
 
                 if (this.isInView("education")) {
                     document.getElementById("education_blob").style.visibility = "visible";
                     document.getElementById("technical_blob").style.visibility = "";
+                    document.getElementById("skills_blob").style.visibility = "";
+                    document.getElementById("interests_blob").style.visibility = "";
                 } else {
                     document.getElementById("education_blob").style.visibility = "";
 
                     if (this.isInView("technical")) {
                         document.getElementById("technical_blob").style.visibility = "visible";
+                        document.getElementById("skills_blob").style.visibility = "";
+                        document.getElementById("interests_blob").style.visibility = "";
                     } else {
                         document.getElementById("technical_blob").style.visibility = "";
+
+                        if (this.isInView("skills")) {
+                            document.getElementById("skills_blob").style.visibility = "visible";
+                            document.getElementById("interests_blob").style.visibility = "";
+                        } else {
+                            document.getElementById("skills_blob").style.visibility = "";
+
+                            if (this.isInView("interests")) {
+                                document.getElementById("interests_blob").style.visibility = "visible";
+                            } else {
+                                document.getElementById("interests_blob").style.visibility = "";
+                            }
+                        }
                     }
                 }
             }
@@ -107,6 +128,24 @@ class NAV extends Component {
                         <div className="blob" id="technical_blob"></div>
                         <div className="item">
                             Technical
+                        </div>
+                    </div>
+
+                    <div className="connect"></div>
+
+                    <div className="item_point" onClick={() => this.nav("skills")}>
+                        <div className="blob" id="skills_blob"></div>
+                        <div className="item">
+                            Other skills
+                        </div>
+                    </div>
+
+                    <div className="connect"></div>
+
+                    <div className="item_point" onClick={() => this.nav("interests")}>
+                        <div className="blob" id="interests_blob"></div>
+                        <div className="item">
+                            Interests
                         </div>
                     </div>
                 </div>

@@ -38,6 +38,20 @@ class TECHNICAL extends Component {
                         <TECHNICAL_SECTION skill="Express.js" rating={2} />
                     </div>
                 </div>
+                <hr />
+                <div className="sub_section">
+                    <div className="sub_content" style={{width: "calc(100% - 20px)"}}>
+                        <div className="sub_heading">
+                            Technologies
+                        </div>
+                        <div className="date">
+                            Ratings relative to my own knowledge
+                        </div>
+                        <TECHNICAL_SECTION skill="AWS Amplify" rating={4} />
+                        <TECHNICAL_SECTION skill="Git" rating={5} />
+                        <TECHNICAL_SECTION skill="Stripe" rating={2} />
+                    </div>
+                </div>
             </div>
         );
     }
