@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import hw from "../../../img/hw.png";
-import alford from "../../../img/alford.jpeg";
+import alford from "../../../img/alford.jpg";
 import EXPERIENCE_SECTION from '../experience/section';
 
 class EDUCATION extends Component {
