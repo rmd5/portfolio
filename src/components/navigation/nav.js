@@ -4,7 +4,8 @@ class NAV extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            scroll: "0%"
+            scroll: "0%",
+            top_button: false
         }
     }
     

@@ -12,12 +12,35 @@ import smoothscroll from 'smoothscroll-polyfill';
 smoothscroll.polyfill();
 
 class MAIN extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            top: false
+        };
+    }
+
+    componentDidMount() {
+        document.getElementById("main").addEventListener("scroll", () => this.scrolled());
+    }
+
+    scrolled() {
+        let y = document.getElementById("main").scrollTop;
+        let top = false;
+        if (y > 300) {
+            top = true;
+        }
+        this.setState({
+            top: top
+        });
+    }
+
     render() {
         return (
             <div className="main" id="main">
                 <div className="content">
                     <div className="header">
                         <img className="profile" src={profile} alt="Rory" />
+                        <br className="mobile" />
                         <div className="name_box">
                             <div className="name">Rory Dobson</div>
                             <div className="contact">
@@ -39,6 +62,11 @@ class MAIN extends Component {
                     <TECHNICAL />
                     <SKILLS />
                     <INTERESTS />
+
+                    <div onClick={() => document.getElementById("main").scrollTo({top: 0, behavior: 'smooth'})} style={{ visibility: this.state.top ? "visible" : "hidden" }} className="scroll_button">
+                        <div className="tooltip">Scroll to top</div>
+                        <i class="fas fa-chevron-up"></i>
+                    </div>
 
                     <div className="footer"></div>
 

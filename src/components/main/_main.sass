@@ -14,6 +14,31 @@
         text-align: left
         position: relative
 
+        .scroll_button
+            width: 50px
+            height: 48px
+            border-radius: 50%
+            border: 2px solid $orange
+            position: fixed
+            bottom: 20px
+            right: 20px
+            color: $grey
+            font-size: 40px
+            text-align: center
+            padding-top: 2px
+            background-color: rgba(white, 0.9)
+            font-family: $sans
+            cursor: pointer
+
+            .tooltip
+                position: absolute
+                transform: translate(-50%, -50%)
+                top: 50%
+                left: -60px
+                text-align: right
+                font-size: 18px
+                width: 96px
+
         .footer
             display: none
             background-color: rgba(white, 0.9)
@@ -35,6 +60,9 @@
                 border-radius: 50%
                 display: inline-block
                 vertical-align: middle
+
+            .mobile
+                display: none
 
             .name_box
                 display: inline-block
