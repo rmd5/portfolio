@@ -1,11 +1,16 @@
 .section
     margin-bottom: 50px
-    box-shadow: 1px 0px 0px $orange inset
+    box-shadow: 2px 0px 0px $orange inset
     position: relative
     overflow: hidden
 
+    .accordion
+        max-height: 0px
+        overflow: hidden
+        transition: all 0.2s ease-in-out
+
     .dropper
-        border: 1px solid #ECA420
+        border: 2px solid $orange
         width: 30px
         height: 99px
         position: absolute
@@ -18,9 +23,10 @@
     .heading
         font-size: 30px
         font-family: $sans
-        border-bottom: 1px solid $orange
+        border-bottom: 2px solid $orange
         padding: 10px
         width: 61%
+        padding-left: 30px
 
     .sub_section
         padding: 0px 10px
@@ -53,6 +59,12 @@
 
             .text
                 font-family: $sans
+
+            .skill
+                font-family: $sans
+                display: inline-block
+                width: calc(100% - 110px)
+                margin-right: 10px
 
     hr
         border: none

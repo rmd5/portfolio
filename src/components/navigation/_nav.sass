@@ -1,11 +1,75 @@
 .nav
-    height: calc(100vh - 2px)
-    display: inline-block
-    vertical-align: middle
-    width: 400px
+    width: 25px
+    position: fixed
+    right: 30px
+    top: 50%
+    transform: translate(-50%, -50%)
 
-    .nav_divider
-        width: 1px
-        background-color: #dadada
-        height: calc(100% - 300px)
-        margin: 150px 0px
+    .content
+        transform: translate(-50%, -50%)
+        position: absolute
+        top: 50%
+        left: 50%
+        text-align: center
+
+        .scroll_monitor
+            position: absolute
+            transform: translate(-50%, -50%)
+            top: 50%
+            left: 12px
+            background-color: $orange
+            height: 200px
+            width: 2px
+
+        .heading
+            font-family: $sans
+            font-size: 30px
+            position: absolute
+            transform: translate(-50%, -50%)
+            top: -40px
+            left: 50%
+            border-bottom: 2px solid $orange
+
+        .item_point
+            width: 20px
+            height: 20px
+            border: 2px solid $orange
+            border-radius: 50%
+            position: relative
+            cursor: pointer
+            background-color: white
+
+            .blob
+                position: absolute
+                transform: translate(-50%, -50%)
+                top: 50%
+                left: 50%
+                width: 15px
+                height: 15px
+                border-radius: 50%
+                background-color: $grey
+                visibility: hidden
+
+            .item
+                margin-right: 10px
+                position: absolute
+                top: 0px
+                right: 20px
+                width: 200px
+                text-align: right
+                font-family: $sans
+
+            .item2
+                margin-left: 10px
+                position: absolute
+                top: 0px
+                left: 20px
+                width: 200px
+                text-align: left
+                font-family: $sans
+
+        .connect
+            height: 50px
+            width: 2px
+            // background-color: $orange
+            margin: 0px 11px

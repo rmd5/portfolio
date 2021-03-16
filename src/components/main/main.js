@@ -4,11 +4,12 @@ import EXPERIENCE from '../sections/experience/experience';
 import profile from "../../img/profile.jpg";
 import EDUCATION from '../sections/education/education';
 import TECHNICAL from '../sections/technical/technical';
+import NAV from '../navigation/nav';
 
 class MAIN extends Component {
     render() {
         return (
-            <div className="main">
+            <div className="main" id="main">
                 <div className="content">
                     <div className="header">
                         <img className="profile" src={profile} alt="Rory" />
@@ -31,6 +32,10 @@ class MAIN extends Component {
                     <EXPERIENCE />
                     <EDUCATION />
                     <TECHNICAL />
+
+                    <div className="footer"></div>
+
+                    <NAV />
                 </div>
             </div>
         );

@@ -1,19 +1,43 @@
 import React, { Component } from 'react';
-import EXPERIENCE_SECTION from '../experience/section';
+import TECHNICAL_SECTION from './section';
 
 class TECHNICAL extends Component {
     render() {
         return (
-            <div className="section">
+            <div className="section" id="technical">
                 <div className="heading">
                     Technical skills
                 </div>
-                <EXPERIENCE_SECTION title="Computer Science at Heriot Watt" date="2017 - 2021" text="Computer Science fourth year, currently studying Big Data, E-Commerce and Machine Learning. For my dissertation, I attempting to increase the employability of Rohingya refugees in Malaysia through the use of a skill sharing web app." />
+                <div className="dropper"></div>
+                <div className="sub_section">
+                    <div className="sub_content" style={{width: "calc(100% - 20px)"}}>
+                        <div className="sub_heading">
+                            Languages
+                        </div>
+                        <div className="date">
+                            Ratings relative to my own knowledge
+                        </div>
+                        <TECHNICAL_SECTION skill="Javascript" rating={5} />
+                        <TECHNICAL_SECTION skill="Java" rating={3} />
+                        <TECHNICAL_SECTION skill="PHP" rating={3} />
+                        <TECHNICAL_SECTION skill="C" rating={2} />
+                        <TECHNICAL_SECTION skill="Python" rating={1} />
+                    </div>
+                </div>
                 <hr />
-                <EXPERIENCE_SECTION title="Actuarial Science at Heriot Watt" date="2016 - 2017" text="Actuarial Science first year, studying statistics, economics, finance and calculus." />
-                <hr />
-                <EXPERIENCE_SECTION title="Alford Academy" date="2010 - 2016" text="Grade A in Higher Mathematics, Graphic Communication, Physics, Chemistry, Biology, Music, and Nat5 English." />
-                <hr />
+                <div className="sub_section">
+                    <div className="sub_content" style={{width: "calc(100% - 20px)"}}>
+                        <div className="sub_heading">
+                            Frameworks
+                        </div>
+                        <div className="date">
+                            Ratings relative to my own knowledge
+                        </div>
+                        <TECHNICAL_SECTION skill="React.js" rating={5} />
+                        <TECHNICAL_SECTION skill="Node" rating={3} />
+                        <TECHNICAL_SECTION skill="Express.js" rating={2} />
+                    </div>
+                </div>
             </div>
         );
     }

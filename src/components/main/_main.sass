@@ -1,16 +1,29 @@
 .main
     display: inline-block
     vertical-align: top
-    width: calc(100% - 400px)
+    width: 100%
     text-align: center
     height: 100vh
     overflow: overlay
+    position: relative
 
     .content
-        width: 680px
+        width: 800px
         max-width: calc(100% - 30px)
         display: inline-block
         text-align: left
+        position: relative
+
+        .footer
+            display: none
+            background-color: rgba(white, 0.9)
+            position: fixed
+            bottom: 15px
+            left: 50%
+            transform: translate(-50%, 0px)
+            height: 35px
+            width: 300px
+            border-radius: 20px
 
         .header
             margin-top: 30px
@@ -32,7 +45,7 @@
                 text-align: center
 
                 .name
-                    border-bottom: 1px solid $orange
+                    border-bottom: 2px solid $orange
                     padding: 10px 0px
 
                 .icon

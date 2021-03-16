@@ -4,7 +4,6 @@ class EXPERIENCE_SECTION extends Component {
     render() {
         return (
             <div className="sub_section">
-                <div className="dropper"></div>
                 {this.props.img ? <img className="logo" src={this.props.img} alt="Logo"></img> : null}
                 <div className="sub_content">
                     <div className="sub_heading">
@@ -15,6 +14,12 @@ class EXPERIENCE_SECTION extends Component {
                     </div>
                     <div className="text">
                         {this.props.text}
+                        {this.props.link ? 
+                            <span>
+                                <br/><br/>
+                                Find out more about it <a href={this.props.link} target="_blank">here</a>
+                            </span>
+                        : null}
                     </div>
                 </div>
             </div>

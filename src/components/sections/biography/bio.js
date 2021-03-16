@@ -3,12 +3,12 @@ import React, { Component } from 'react';
 class BIO extends Component {
     render() {
         return (
-            <div className="section">
+            <div className="section" id="biography">
                 <div className="heading">
-                    About me...
+                    About me
                 </div>
+                <div className="dropper"></div>
                 <div className="sub_section">
-                    <div className="dropper"></div>
                     <div className="sub_heading"></div>
                     <div className="bio_text">
                         Currently working as a Full Stack Engineer at Free.co.uk.<br /><br />
