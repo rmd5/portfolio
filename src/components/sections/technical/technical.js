@@ -20,6 +20,7 @@ class TECHNICAL extends Component {
                         <TECHNICAL_SECTION skill="Javascript" rating={5} />
                         <TECHNICAL_SECTION skill="Java" rating={3} />
                         <TECHNICAL_SECTION skill="PHP" rating={3} />
+                        <TECHNICAL_SECTION skill="SQL" rating={4} />
                         <TECHNICAL_SECTION skill="C" rating={2} />
                         <TECHNICAL_SECTION skill="Python" rating={1} />
                     </div>

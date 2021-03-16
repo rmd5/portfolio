@@ -7,6 +7,9 @@ import TECHNICAL from '../sections/technical/technical';
 import NAV from '../navigation/nav';
 import SKILLS from '../sections/skills/skills';
 import INTERESTS from '../sections/interests/interests';
+import smoothscroll from 'smoothscroll-polyfill';
+
+smoothscroll.polyfill();
 
 class MAIN extends Component {
     render() {
@@ -18,15 +21,15 @@ class MAIN extends Component {
                         <div className="name_box">
                             <div className="name">Rory Dobson</div>
                             <div className="contact">
-                                <div className="icon">
+                                <a className="icon" href="https://gitlab.com/rmd5" target="_blank">
                                     <i class="fab fa-gitlab"></i>
-                                </div>
-                                <div className="icon">
+                                </a>
+                                <a className="icon" href="https://www.linkedin.com/in/rory-dobson-12b516174/" target="_blank">
                                     <i class="fab fa-linkedin"></i>
-                                </div>
-                                <div className="icon">
+                                </a>
+                                <a className="icon" href="mailto:rory.dobson@yahoo.com">
                                     <i class="far fa-envelope"></i>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
