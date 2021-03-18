@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import history from '../../../history';
-import profile from "../../../img/profile.jpg";
 import HEADER from '../../header/header';
 
 class LANDING extends Component {
-    change() {
+    change(link) {
         let landing = document.getElementById("header");
         landing.classList.add("header_after");
 
         document.getElementById("welcome").style.opacity = "0";
-        setTimeout(function() {
-            history.push("/cv");
+        setTimeout(function () {
+            history.push(link);
         }, 400);
     }
 
@@ -21,18 +20,20 @@ class LANDING extends Component {
                     <div className="landing" id="landing">
                         <HEADER />
 
-                        <div className="welcome" id="welcome">
-                            {/* Welcome
+                        <div className="welcome" id="welcome" style={{textAlign: "left"}}>
+                            {/* Hi there!
 
                             <div className="links">
-                                What would you like to see?
+                                I am a computer science student in my fourth year of University at Heriot Watt.
                             </div> */}
 
-                            <div className="link_btn" onClick={() => this.change()}>
-                                CV
-                            </div>
-                            <div className="link_btn">
-                                Projects
+                            <div style={{ textAlign: "center" }}>
+                                <div className="link_btn" onClick={() => this.change("/cv")}>
+                                    CV
+                                </div>
+                                <div className="link_btn" onClick={() => this.change("/projects")}>
+                                    Projects
+                                </div>
                             </div>
                         </div>
                     </div>

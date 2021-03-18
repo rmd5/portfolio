@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import BIO from '../sections/biography/bio';
 import EXPERIENCE from '../sections/experience/experience';
-import profile from "../../../img/profile.jpg";
 import EDUCATION from '../sections/education/education';
 import TECHNICAL from '../sections/technical/technical';
 import NAV from '../navigation/nav';
@@ -9,6 +8,8 @@ import SKILLS from '../sections/skills/skills';
 import INTERESTS from '../sections/interests/interests';
 import smoothscroll from 'smoothscroll-polyfill';
 import HEADER from '../../header/header';
+import * as Icon from "react-bootstrap-icons";
+import history from '../../../history';
 
 smoothscroll.polyfill();
 
@@ -35,27 +36,41 @@ class CV extends Component {
         });
     }
 
+    change() {
+        document.getElementById("cv").style.opacity = "0";
+        setTimeout(function () {
+            history.push("/projects");
+        }, 400);
+    }
+
     render() {
         return (
             <div className="main" id="main">
                 <div className="content">
-                    <HEADER />
-
-                    <BIO />
-                    <EXPERIENCE />
-                    <EDUCATION />
-                    <TECHNICAL />
-                    <SKILLS />
-                    <INTERESTS />
-
-                    <div onClick={() => document.getElementById("main").scrollTo({top: 0, behavior: 'smooth'})} style={{ visibility: this.state.top ? "visible" : "hidden" }} className="scroll_button">
-                        <div className="tooltip">Scroll to top</div>
-                        <i class="fas fa-chevron-up"></i>
+                    <div style={{ position: "relative" }}>
+                        <HEADER />
+                        <div className="link_to_other">
+                            Check out my <a onClick={() => this.change()}>projects<div className="arrow"><Icon.ArrowRightShort /></div></a>
+                        </div>
                     </div>
 
-                    <div className="footer"></div>
+                    <div id="cv">
+                        <BIO />
+                        <EXPERIENCE />
+                        <EDUCATION />
+                        <TECHNICAL />
+                        <SKILLS />
+                        <INTERESTS />
 
-                    <NAV />
+                        <div onClick={() => document.getElementById("main").scrollTo({ top: 0, behavior: 'smooth' })} style={{ visibility: this.state.top ? "visible" : "hidden" }} className="scroll_button">
+                            <div className="tooltip">Scroll to top</div>
+                            <i class="fas fa-chevron-up"></i>
+                        </div>
+
+                        <div className="footer"></div>
+
+                        <NAV />
+                    </div>
                 </div>
             </div>
         );

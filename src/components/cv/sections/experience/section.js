@@ -17,7 +17,7 @@ class EXPERIENCE_SECTION extends Component {
                         {this.props.link ? 
                             <span>
                                 <br/><br/>
-                                Find out more about it <a href={this.props.link} target="_blank">here</a>
+                                Find out more about it <a href={this.props.link} target="_blank" rel="noreferrer">here</a>
                             </span>
                         : null}
                     </div>
