@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class PROJECT_SECTION extends Component {
     render() {
         return (
-            <div className="section">
+            <div className="section" id={this.props.heading}>
                 <div className="heading">
                     {this.props.img ? <img className="logo" src={this.props.img} alt="Logo"></img> : null} {this.props.heading}
                 </div>
@@ -35,6 +35,12 @@ class PROJECT_SECTION extends Component {
                                 <span>
                                     <br />
                                 View the app <a href={this.props.link} target="_blank" rel="noreferrer">here</a>
+                                </span>
+                                : null}
+                            {this.props.git ?
+                                <span>
+                                    <br />
+                                View the git <a href={this.props.git} target="_blank" rel="noreferrer">here</a>
                                 </span>
                                 : null}
                         </div>

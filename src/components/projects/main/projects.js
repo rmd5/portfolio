@@ -6,8 +6,32 @@ import PROJECT_SECTION from '../section/section';
 
 import talented from "../../../img/talented.svg";
 import bubble from "../../../img/bubble.png";
+import maze from "../../../img/maze.png";
+import PROJECTS_NAV from '../nav/nav';
 
 class PROJECTS extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            top: false
+        };
+    }
+
+    componentDidMount() {
+        document.getElementById("main").addEventListener("scroll", () => this.scrolled());
+    }
+    
+    scrolled() {
+        let y = document.getElementById("main").scrollTop;
+        let top = false;
+        if (y > 300) {
+            top = true;
+        }
+        this.setState({
+            top: top
+        });
+    }
+
     change() {
         document.getElementById("projects").style.opacity = "0";
         setTimeout(function () {
@@ -39,11 +63,23 @@ class PROJECTS extends Component {
                             link="https://talent-ed.app"
                         />
 
-                        <PROJECT_SECTION img={bubble} heading="Bubble" date="2019 - 2020" stack={["HTML5", "PHP", "Javascript", "CSS3", "JQuery"]}
-                            text={<span>With a team of 6 people in a university project, we created an application that allows for the control of smart devices within the home. 
+                        <PROJECT_SECTION img={bubble} git="https://gitlab.com/Mcgregor381/bubble" heading="Bubble" date="2019 - 2020" stack={["HTML5", "PHP", "Javascript", "CSS3", "JQuery"]}
+                            text={<span>With a team of 6 people in a university project, we created an application that allows for the control of smart devices within the home.
                                 It is possible to set timers, review statistics of the home, and toggle individual devices, whole rooms, or the entire house.</span>}
                             link="http://bubble.rorydobson.com/"
                         />
+
+                        <PROJECT_SECTION img={maze} git="https://gitlab.com/rmd5/maze" heading="Maze" date="2020" stack={["HTML5", "Javascript", "CSS3"]}
+                            text={<span>Small maze game I created as a hobby. The aim is to get through the maze using a series of buttons.</span>}
+                            link="https://rorydobson.com/maze"
+                        />
+
+                        <PROJECTS_NAV />
+
+                        <div onClick={() => document.getElementById("main").scrollTo({ top: 0, behavior: 'smooth' })} style={{ visibility: this.state.top ? "visible" : "hidden" }} className="scroll_button">
+                            <div className="tooltip">Scroll to top</div>
+                            <i class="fas fa-chevron-up"></i>
+                        </div>
                     </div>
                 </div>
             </div>
