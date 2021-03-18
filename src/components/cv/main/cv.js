@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import BIO from '../sections/biography/bio';
 import EXPERIENCE from '../sections/experience/experience';
-import profile from "../../img/profile.jpg";
+import profile from "../../../img/profile.jpg";
 import EDUCATION from '../sections/education/education';
 import TECHNICAL from '../sections/technical/technical';
 import NAV from '../navigation/nav';
 import SKILLS from '../sections/skills/skills';
 import INTERESTS from '../sections/interests/interests';
 import smoothscroll from 'smoothscroll-polyfill';
+import HEADER from '../../header/header';
 
 smoothscroll.polyfill();
 
-class MAIN extends Component {
+class CV extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -38,24 +39,8 @@ class MAIN extends Component {
         return (
             <div className="main" id="main">
                 <div className="content">
-                    <div className="header">
-                        <img className="profile" src={profile} alt="Rory" />
-                        <br className="mobile" />
-                        <div className="name_box">
-                            <div className="name">Rory Dobson</div>
-                            <div className="contact">
-                                <a className="icon" href="https://gitlab.com/rmd5" target="_blank">
-                                    <i class="fab fa-gitlab"></i>
-                                </a>
-                                <a className="icon" href="https://www.linkedin.com/in/rory-dobson-12b516174/" target="_blank">
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                                <a className="icon" href="mailto:rory.dobson@yahoo.com">
-                                    <i class="far fa-envelope"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    <HEADER />
+
                     <BIO />
                     <EXPERIENCE />
                     <EDUCATION />
@@ -77,4 +62,4 @@ class MAIN extends Component {
     }
 }
 
-export default MAIN;
+export default CV;
