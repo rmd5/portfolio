@@ -1,0 +1,32 @@
+.slick-next:before, .slick-prev:before
+    color: $medium
+    font-size: 32px
+
+.slick-next:hover, .slick-prev:hover
+    border: none
+    outline: none
+
+.slick-next
+    // right: 0px
+    width: 32px
+    height: 32px
+
+.slick-prev
+    // left: 0px
+    z-index: 1
+    width: 32px
+    height: 32px
+
+.slick-slider
+    width: calc(100% - 30px)
+    display: inline-block
+
+@media (max-width: 460px)
+    #projects
+        .section
+            .sub_section
+                .sub_content
+                    .slideshow
+                        .img_wrap
+                            .project_image
+                                height: 100px

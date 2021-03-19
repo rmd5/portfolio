@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import settings from './settings';
 
 class PROJECT_SECTION extends Component {
     render() {
@@ -43,6 +47,14 @@ class PROJECT_SECTION extends Component {
                                 View the git <a href={this.props.git} target="_blank" rel="noreferrer">here</a>
                                 </span>
                                 : null}
+                        </div>
+                        <div style={{ marginBottom: "30px", marginTop: "20px", textAlign: "center" }}>
+                            <Slider className="slideshow" {...settings}>
+                                {this.props.slides ? this.props.slides.map(e => {
+                                    return <div className="img_wrap"><img src={e} className="project_image" alt="Project Image" ></img></div>
+                                })
+                                    : null}
+                            </Slider>
                         </div>
                     </div>
                 </div>
