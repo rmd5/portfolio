@@ -2,7 +2,6 @@ const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: find(),
     // centerMode: true,
     centerPadding: "50px"
 };
