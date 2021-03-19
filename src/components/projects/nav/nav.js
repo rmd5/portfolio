@@ -68,7 +68,7 @@ class PROJECTS_NAV extends Component {
                 <div className="content">
                     <div className="scroll_monitor" style={{backgroundImage: "linear-gradient(#464646 0%, #464646 "+percent+", #ECA420 "+percent+", #ECA420 100%)"}}></div>
 
-                    <div className="item_point" onClick={() => this.nav("biography")}>
+                    <div className="item_point" onClick={() => this.nav("TalentEd")}>
                         <div className="blob" id="talented_blob"></div>
                         <div className="item">
                             TalentEd
@@ -77,7 +77,7 @@ class PROJECTS_NAV extends Component {
 
                     <div className="connect"></div>
 
-                    <div className="item_point" onClick={() => this.nav("experience")}>
+                    <div className="item_point" onClick={() => this.nav("Bubble")}>
                         <div className="blob" id="bubble_blob"></div>
                         <div className="item">
                             Bubble
@@ -86,7 +86,7 @@ class PROJECTS_NAV extends Component {
 
                     <div className="connect"></div>
 
-                    <div className="item_point" onClick={() => this.nav("education")}>
+                    <div className="item_point" onClick={() => this.nav("Maze")}>
                         <div className="blob" id="maze_blob"></div>
                         <div className="item">
                             Maze

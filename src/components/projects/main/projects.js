@@ -70,7 +70,7 @@ class PROJECTS extends Component {
                     </div>
 
                     <div id="projects">
-                        <PROJECT_SECTION slides={[te1, te2, te3, te4, te5, te6, te7]} img={talented} heading="TalentEd" date="2020 - 2021" stack={["React.js", "SASS", "AWS Amplify"]}
+                        <PROJECT_SECTION slides={[te1, te2, te3, te4, te5, te6, te7]} img={talented} heading="TalentEd" date="2020 - 2021" stack={["React.js", "SASS", "AWS Amplify", "GraphQL", "DynamoDB", "AWS S3"]}
                             text={<span>TalentEd is a web app that looked at improving the employability of Rohingya refugees in Malaysia.
                             In collaboration with the UNHCR and Aspire Penang, the app was developed with a focus on providing refugees
                             with a platform on which they can trade and learn skills. This project was completed for my final year dissertation.
