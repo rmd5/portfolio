@@ -8,7 +8,6 @@ class PROJECT_SECTION extends Component {
     render() {
         return (
             <div className="section" id={this.props.heading}>
-                <iframe src="https://free.co.uk/adverse_credit_creditladder"></iframe>
                 <div className="heading">
                     {this.props.img ? <img className="logo" src={this.props.img} alt="Logo"></img> : null} {this.props.heading}
                 </div>
