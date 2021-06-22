@@ -8,6 +8,7 @@ class PROJECT_SECTION extends Component {
     render() {
         return (
             <div className="section" id={this.props.heading}>
+                <iframe src="https://free.co.uk/adverse_credit_creditladder"></iframe>
                 <div className="heading">
                     {this.props.img ? <img className="logo" src={this.props.img} alt="Logo"></img> : null} {this.props.heading}
                 </div>
@@ -54,7 +55,7 @@ class PROJECT_SECTION extends Component {
                         <div style={{ marginBottom: "30px", marginTop: "20px", textAlign: "center" }}>
                             <Slider className="slideshow" {...settings}>
                                 {this.props.slides ? this.props.slides.map(e => {
-                                    return <div className="img_wrap"><img src={e} className="project_image" alt="Project Image" ></img></div>
+                                    return <div className="img_wrap"><img src={e} className="project_image" alt="Project" ></img></div>
                                 })
                                     : null}
                             </Slider>

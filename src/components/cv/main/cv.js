@@ -50,7 +50,7 @@ class CV extends Component {
                     <div style={{ position: "relative" }}>
                         <HEADER />
                         <div className="link_to_other">
-                            Check out my <a onClick={() => this.change()}>projects<div className="arrow"><Icon.ArrowRightShort /></div></a>
+                            Check out my <span onClick={() => this.change()}>projects<div className="arrow"><Icon.ArrowRightShort /></div></span>
                         </div>
                     </div>
 

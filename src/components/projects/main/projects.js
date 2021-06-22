@@ -39,7 +39,7 @@ class PROJECTS extends Component {
     componentDidMount() {
         document.getElementById("main").addEventListener("scroll", () => this.scrolled());
     }
-    
+
     scrolled() {
         let y = document.getElementById("main").scrollTop;
         let top = false;
@@ -65,19 +65,19 @@ class PROJECTS extends Component {
                     <div style={{ position: "relative" }}>
                         <HEADER />
                         <div className="link_to_other">
-                            Check out my <a onClick={() => this.change("/cv")}>CV<div className="arrow"><Icon.ArrowRightShort /></div></a>
+                            Check out my <span onClick={() => this.change("/cv")}>CV<div className="arrow"><Icon.ArrowRightShort /></div></span>
                         </div>
                     </div>
 
                     <div id="projects">
                         <PROJECT_SECTION slides={[te1, te2, te3, te4, te5, te6, te7]} img={talented} heading="TalentEd" date="2020 - 2021" stack={["React.js", "SASS", "AWS Amplify", "GraphQL", "DynamoDB", "AWS S3"]}
                             text={<span>TalentEd is a web app that looked at improving the employability of Rohingya refugees in Malaysia.
-                            In collaboration with the UNHCR and Aspire Penang, the app was developed with a focus on providing refugees
-                            with a platform on which they can trade and learn skills. This project was completed for my final year dissertation.
-                                <br /><br />
-                                Particular care was taken over the language translations and accessibility for those unable to read. Translations for text
-                                was provided in four different languages, and there was a text-to-speech feature for all written text throughout the app.
-                                Help videos were included to guide users through the different features of the app, and iconography was implemented to help with user recall.
+                                    In collaboration with the UNHCR and Aspire Penang, the app was developed with a focus on providing refugees
+                                    with a platform on which they can trade and learn skills. This project was completed for my final year dissertation.
+                                    <br /><br />
+                                    Particular care was taken over the language translations and accessibility for those unable to read. Translations for text
+                                    was provided in five different languages, and there was a text-to-speech feature for all written text throughout the app.
+                                    Help videos were included to guide users through the different features of the app, and iconography was implemented to help with user recall.
                                 </span>}
                             link="https://talent-ed.app"
                         />

@@ -11,7 +11,7 @@ class EDUCATION extends Component {
                     Education
                 </div>
                 <div className="dropper"></div>
-                <EXPERIENCE_SECTION img={hw} title="Computer Science at Heriot Watt" date="2017 - 2021" text="Computer Science fourth year, currently studying Big Data, E-Commerce and Machine Learning. For my dissertation, I attempting to increase the employability of Rohingya refugees in Malaysia through the use of a skill sharing web app." />
+                <EXPERIENCE_SECTION img={hw} title="Computer Science at Heriot Watt" date="2017 - 2021" text="Computer Science fourth year, currently studying Big Data, E-Commerce and Machine Learning. For my dissertation, I attempted to create a skill sharing web app to increase the employability of Rohingya refugees in Malaysia." />
                 <hr />
                 <EXPERIENCE_SECTION img={hw} title="Actuarial Science at Heriot Watt" date="2016 - 2017" text="Actuarial Science first year, studying statistics, economics, finance and calculus." />
                 <hr />
