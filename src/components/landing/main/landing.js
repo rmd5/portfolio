@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import history from '../../../history';
 import HEADER from '../../header/header';
+import Background from '../../parallax/background';
+import BackgroundMobile from '../../parallax/background_mobile';
 
 class LANDING extends Component {
     change(link) {
@@ -19,6 +21,8 @@ class LANDING extends Component {
                 <div className="content" id="content">
                     <div className="landing" id="landing">
                         <HEADER />
+                        <Background />
+                        <BackgroundMobile />
 
                         <div className="welcome" id="welcome" style={{textAlign: "left"}}>
                             {/* Hi there!

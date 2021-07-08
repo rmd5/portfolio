@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import hw from "../../../../img/hw.png";
-import alford from "../../../../img/alford.jpg";
+import alford from "../../../../img/alford.png";
 import EXPERIENCE_SECTION from '../experience/section';
 
 class EDUCATION extends Component {
@@ -11,7 +11,7 @@ class EDUCATION extends Component {
                     Education
                 </div>
                 <div className="dropper"></div>
-                <EXPERIENCE_SECTION img={hw} title="Computer Science at Heriot Watt" date="2017 - 2021" text="Computer Science fourth year, currently studying Big Data, E-Commerce and Machine Learning. For my dissertation, I attempted to create a skill sharing web app to increase the employability of Rohingya refugees in Malaysia." />
+                <EXPERIENCE_SECTION img={hw} title="Computer Science at Heriot Watt" date="2017 - 2021" text="I graduated from Heriot Watt University with a Bachelor of Science in Computer Science with Honours of the First Class Award. For my dissertation project, in which I created a web app to help the sharing of knowledge within the Rohingya communities of Malaysia, I earned the Cooper-Walker Engineering Ltd Prize." />
                 <hr />
                 <EXPERIENCE_SECTION img={hw} title="Actuarial Science at Heriot Watt" date="2016 - 2017" text="Actuarial Science first year, studying statistics, economics, finance and calculus." />
                 <hr />

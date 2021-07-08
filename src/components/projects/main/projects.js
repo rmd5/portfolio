@@ -27,6 +27,8 @@ import te4 from "../../../img/te4.png";
 import te5 from "../../../img/te5.png";
 import te6 from "../../../img/te6.png";
 import te7 from "../../../img/te7.png";
+import Background from '../../parallax/background';
+import BackgroundMobile from '../../parallax/background_mobile';
 
 class PROJECTS extends Component {
     constructor(props) {
@@ -70,15 +72,18 @@ class PROJECTS extends Component {
                     </div>
 
                     <div id="projects">
+                        <Background />
+                        <BackgroundMobile />
                         <PROJECT_SECTION slides={[te1, te2, te3, te4, te5, te6, te7]} img={talented} heading="TalentEd" date="2020 - 2021" stack={["React.js", "SASS", "AWS Amplify", "GraphQL", "DynamoDB", "AWS S3"]}
                             text={<span>TalentEd is a web app that looked at improving the employability of Rohingya refugees in Malaysia.
-                                    In collaboration with the UNHCR and Aspire Penang, the app was developed with a focus on providing refugees
-                                    with a platform on which they can trade and learn skills. This project was completed for my final year dissertation.
-                                    <br /><br />
-                                    Particular care was taken over the language translations and accessibility for those unable to read. Translations for text
-                                    was provided in five different languages, and there was a text-to-speech feature for all written text throughout the app.
-                                    Help videos were included to guide users through the different features of the app, and iconography was implemented to help with user recall.
-                                </span>}
+                                In collaboration with the UNHCR and Aspire Penang, the app was developed with a focus on providing refugees
+                                with a platform on which they can trade and learn skills. This project was completed for my final year dissertation
+                                and earned me the Cooper-Walker Engineering Ltd Prize for outstanding project work.
+                                <br /><br />
+                                Particular care was taken over the language translations and accessibility for those unable to read. Translations for text
+                                was provided in five different languages, and there was a text-to-speech feature for all written text throughout the app.
+                                Help videos were included to guide users through the different features of the app, and iconography was implemented to help with user recall.
+                            </span>}
                             link="https://talent-ed.app"
                         />
 

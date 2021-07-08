@@ -10,6 +10,9 @@ import smoothscroll from 'smoothscroll-polyfill';
 import HEADER from '../../header/header';
 import * as Icon from "react-bootstrap-icons";
 import history from '../../../history';
+import Parallax from '../../parallax';
+import Background from '../../parallax/background';
+import BackgroundMobile from '../../parallax/background_mobile';
 
 smoothscroll.polyfill();
 
@@ -43,6 +46,10 @@ class CV extends Component {
         }, 400);
     }
 
+    getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+    }
+
     render() {
         return (
             <div className="main" id="main">
@@ -55,6 +62,8 @@ class CV extends Component {
                     </div>
 
                     <div id="cv">
+                        <Background />
+                        <BackgroundMobile />
                         <BIO />
                         <EXPERIENCE />
                         <EDUCATION />

@@ -11,7 +11,7 @@ function HEADER() {
                     <div className="name">
                         Rory Dobson
                         <div className="description">
-                            Frontend developer
+                            Full-stack developer
                         </div>
                     </div>
                     <div className="contact">

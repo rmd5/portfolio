@@ -11,9 +11,10 @@ class BIO extends Component {
                 <div className="sub_section">
                     <div className="sub_heading"></div>
                     <div className="bio_text">
-                        Currently working as a Full Stack Engineer at Free.co.uk.<br /><br />
-                        Computer Science fourth year, currently studying Big Data, E-Commerce and Machine Learning. For my dissertation, I am attempting to increase the employability of Rohingya refugees in Malaysia through the use of a skill sharing web app.<br /><br />
-                        I have achieved straight A’s in third year, and in the first semester of fourth year, and I am hopefully on my way to earning a first-class degree.
+                        Currently working as a Full Stack Engineer at Free.co.uk.
+                        <br /><br />
+                        I love learning about new technologies and ways in which I can improve my skills.
+                        I have a passion for problem solving and mathematics, and love applying that passion through the use of the MERN stack.
                     </div>
                 </div>
             </div>

@@ -1,0 +1,17 @@
+body
+    .main
+        .content
+            #cv, #projects, #landing
+                .background_mobile
+                    display: none
+
+@media (max-width: 600px)
+    body
+        .main
+            .content
+                #cv, #projects, #landing
+                    .background_parallax
+                        display: none
+
+                    .background_mobile
+                        display: block

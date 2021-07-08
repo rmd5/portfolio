@@ -6,16 +6,28 @@
     height: 100vh
     overflow: overlay
     position: relative
+    overflow-x: hidden
 
     .content
         width: 800px
-        max-width: calc(100% - 30px)
+        max-width: calc(100% - 15px)
+        padding-right: 15px
         display: inline-block
         text-align: left
         position: relative
+        overflow: hidden
+        margin-right: 300px
+        margin-left: 15px
 
-        #cv, #projects
+        #cv, #projects, #landing
             transition: 0.4s all ease-in-out
+
+            .box
+                width: 100%
+                height: 100%
+                border-radius: 30px
+                background-color: rgba($teal, 0.1)
+                z-index: -1
 
         .scroll_button
             width: 50px
@@ -73,6 +85,11 @@
             margin-top: 30px
             margin-bottom: 50px
             text-align: center
+
+            .background_shapes
+                position: fixed
+                top: 0px
+                left: 0px
 
             .profile
                 width: 250px

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import EXPERIENCE_SECTION from './section';
 
-import free from "../../../../img/free.jpeg";
-import bright from "../../../../img/bright.jpeg";
+import free from "../../../../img/free.svg";
+import bright from "../../../../img/bright.png";
 import hw from "../../../../img/hw.png";
 import camp from "../../../../img/camp.png";
-import gravity from "../../../../img/gravity.jpeg";
+import gravity from "../../../../img/gravity.png";
 import goodbrands from "../../../../img/goodbrands.jpg";
 import toggle_accordion from '../../../../constants/accordion';
 

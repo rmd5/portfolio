@@ -4,6 +4,7 @@
     .content
         position: initial
         width: 100%
+        height: 100vh
         text-align: center
 
         .landing
@@ -28,7 +29,7 @@
                 max-width: calc(100%)
 
             .header_after
-                transform: translate(-50%, 0%)
+                transform: translate(calc(-50% - 158px), 0%)
                 position: relative
                 transition: 0.4s all ease-in-out
                 top: 30px
@@ -62,6 +63,20 @@
 // .landing_wrap .main
 //     height: auto
 
+@media (max-width: 1130px)
+    .landing_wrap
+        .content
+            .landing
+                .header
+                    transform: translate(-50%, 0%) scale(1.2)
+
+                .header_after
+                    transform: translate(calc(-50% - 88px), 0%)
+                    top: 30px
+
+                .welcome
+                    top: calc(50% + 150px)
+
 @media (max-width: 830px)
     .landing_wrap
         .content
@@ -70,7 +85,7 @@
                     transform: translate(-50%, 0%) scale(1.2)
 
                 .header_after
-                    transform: translate(-50%, 0%)
+                    transform: translate(calc(-50% - 7px), 0%)
                     top: 30px
 
                 .welcome
