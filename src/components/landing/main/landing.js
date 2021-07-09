@@ -24,7 +24,7 @@ class LANDING extends Component {
                         <Background />
                         <BackgroundMobile />
 
-                        <div className="welcome" id="welcome" style={{textAlign: "left"}}>
+                        <div className="welcome" id="welcome" style={{ textAlign: "left" }}>
                             {/* Hi there!
 
                             <div className="links">

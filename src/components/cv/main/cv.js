@@ -10,7 +10,6 @@ import smoothscroll from 'smoothscroll-polyfill';
 import HEADER from '../../header/header';
 import * as Icon from "react-bootstrap-icons";
 import history from '../../../history';
-import Parallax from '../../parallax';
 import Background from '../../parallax/background';
 import BackgroundMobile from '../../parallax/background_mobile';
 

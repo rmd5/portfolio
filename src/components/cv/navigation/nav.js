@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+var scrollIntoView = require('scroll-into-view');
 
 class NAV extends Component {
     constructor(props) {
@@ -8,7 +9,7 @@ class NAV extends Component {
             top_button: false
         }
     }
-    
+
     componentDidMount() {
         this.checkId();
         document.getElementById("main").addEventListener("scroll", () => {
@@ -77,7 +78,7 @@ class NAV extends Component {
     }
 
     nav(id) {
-        document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+        scrollIntoView(document.getElementById(id), { align: { top: 0 } })
     }
 
     getY() {
@@ -96,7 +97,7 @@ class NAV extends Component {
         return (
             <div className="nav">
                 <div className="content">
-                    <div className="scroll_monitor" style={{backgroundImage: "linear-gradient(#464646 0%, #464646 "+percent+", #ECA420 "+percent+", #ECA420 100%)"}}></div>
+                    <div className="scroll_monitor" style={{ backgroundImage: "linear-gradient(#464646 0%, #464646 " + percent + ", #ECA420 " + percent + ", #ECA420 100%)" }}></div>
 
                     <div className="item_point" onClick={() => this.nav("biography")}>
                         <div className="blob" id="biography_blob"></div>
