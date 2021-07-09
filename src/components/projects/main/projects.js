@@ -90,12 +90,12 @@ class PROJECTS extends Component {
                         <PROJECT_SECTION slides={[bubble1, bubble2, bubble3, bubble4]} img={bubble} git="https://gitlab.com/Mcgregor381/bubble" heading="Bubble" date="2019 - 2020" stack={["HTML5", "PHP", "Javascript", "CSS3", "JQuery"]}
                             text={<span>With a team of 6 people in a university project, we created an application that allows for the control of smart devices within the home.
                                 It is possible to set timers, review statistics of the home, and toggle individual devices, whole rooms, or the entire house.</span>}
-                            link="http://bubble.rorydobson.com/"
+                            // link="http://bubble.rorydobson.com/"
                         />
 
                         <PROJECT_SECTION slides={[maze1, maze2, maze3, maze4, maze5]} img={maze} git="https://gitlab.com/rmd5/maze" heading="Maze" date="2020" stack={["HTML5", "Javascript", "CSS3"]}
                             text={<span>Small maze game I created as a hobby. The aim is to get through the maze using a series of buttons.</span>}
-                            link="https://rorydobson.com/maze"
+                            // link="https://rorydobson.com/maze"
                         />
 
                         <PROJECTS_NAV />
