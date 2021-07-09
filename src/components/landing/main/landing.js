@@ -21,8 +21,12 @@ class LANDING extends Component {
                 <div className="content" id="content">
                     <div className="landing" id="landing">
                         <HEADER />
-                        <Background />
-                        <BackgroundMobile />
+                        <div className="background_wrapper">
+                            <Background />
+                        </div>
+                        <div className="background_wrapper">
+                            <BackgroundMobile />
+                        </div>
 
                         <div className="welcome" id="welcome" style={{ textAlign: "left" }}>
                             {/* Hi there!
