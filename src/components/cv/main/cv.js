@@ -72,7 +72,9 @@ class CV extends Component {
 
                         <div onClick={() => document.getElementById("main").scrollTo({ top: 0, behavior: 'smooth' })} style={{ visibility: this.state.top ? "visible" : "hidden" }} className="scroll_button">
                             <div className="tooltip">Scroll to top</div>
-                            <i class="fas fa-chevron-up"></i>
+                            <div className="up">
+                                <Icon.ArrowUpShort />
+                            </div>
                         </div>
 
                         <div className="footer"></div>

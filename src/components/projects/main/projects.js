@@ -30,6 +30,8 @@ import te7 from "../../../img/te7.png";
 import Background from '../../parallax/background';
 import BackgroundMobile from '../../parallax/background_mobile';
 
+import * as Icons from "react-bootstrap-icons"
+
 class PROJECTS extends Component {
     constructor(props) {
         super(props);
@@ -102,7 +104,9 @@ class PROJECTS extends Component {
 
                         <div onClick={() => document.getElementById("main").scrollTo({ top: 0, behavior: 'smooth' })} style={{ visibility: this.state.top ? "visible" : "hidden" }} className="scroll_button">
                             <div className="tooltip">Scroll to top</div>
-                            <i class="fas fa-chevron-up"></i>
+                            <div className="up">
+                                <Icon.ArrowUpShort />
+                            </div>
                         </div>
                     </div>
                 </div>
