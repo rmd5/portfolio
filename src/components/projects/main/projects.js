@@ -90,7 +90,7 @@ class PROJECTS extends Component {
                             link="https://talent-ed.app"
                         />
 
-                        <PROJECT_SECTION img={profile} heading="This website" date="2020 - 2021" stack={["React.js", "SASS", "AWS Amplify"]}
+                        <PROJECT_SECTION img={profile} git="https://gitlab.com/rmd5/portfolio" heading="This website" date="2020 - 2021" stack={["React.js", "SASS", "AWS Amplify"]}
                             text={<span>
                                 This website was created to reflect my experience and achievements. It was created with React.js and hosted on AWS Amplify.
                                 The front page was animated so that it would seemlessly blend into either the "CV" page or the "Projects" page when the buttons were clicked.
