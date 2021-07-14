@@ -18,7 +18,7 @@ function HEADER() {
                         <a className="icon" href="https://gitlab.com/rmd5" target="_blank" rel="noreferrer">
                             <i class="fab fa-gitlab"></i>
                         </a>
-                        <a className="icon" href="https://www.linkedin.com/in/rory-dobson-12b516174/" target="_blank" rel="noreferrer">
+                        <a className="icon" href="https://www.linkedin.com/in/rory-dobson/" target="_blank" rel="noreferrer">
                             <i class="fab fa-linkedin"></i>
                         </a>
                         <a className="icon" href="mailto:rory.dobson@yahoo.com">
