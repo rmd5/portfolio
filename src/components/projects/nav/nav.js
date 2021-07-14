@@ -27,7 +27,7 @@ class PROJECTS_NAV extends Component {
         } else {
             document.getElementById("talented_blob").style.visibility = "";
 
-            if (this.isInView("This")) {
+            if (this.isInView("This website")) {
                 document.getElementById("this_blob").style.visibility = "visible";
                 document.getElementById("bubble_blob").style.visibility = "";
                 document.getElementById("maze_blob").style.visibility = "";
@@ -87,7 +87,7 @@ class PROJECTS_NAV extends Component {
 
                     <div className="connect"></div>
 
-                    <div className="item_point" onClick={() => this.nav("This")}>
+                    <div className="item_point" onClick={() => this.nav("This website")}>
                         <div className="blob" id="this_blob"></div>
                         <div className="item">
                             This website
