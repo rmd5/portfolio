@@ -32,6 +32,8 @@ class PROJECTS_NAV extends Component {
                 document.getElementById("bubble_blob").style.visibility = "";
                 document.getElementById("maze_blob").style.visibility = "";
             } else {
+                document.getElementById("this_blob").style.visibility = "";
+
                 if (this.isInView("Bubble")) {
                     document.getElementById("bubble_blob").style.visibility = "visible";
                     document.getElementById("maze_blob").style.visibility = "";
