@@ -7,6 +7,7 @@ import PROJECT_SECTION from '../section/section';
 import talented from "../../../img/talented.svg";
 import bubble from "../../../img/bubble.png";
 import maze from "../../../img/maze.png";
+import profile from "../../../img/profile.jpg";
 import PROJECTS_NAV from '../nav/nav';
 
 import maze1 from "../../../img/maze1.png";
@@ -89,15 +90,24 @@ class PROJECTS extends Component {
                             link="https://talent-ed.app"
                         />
 
+                        <PROJECT_SECTION img={profile} heading="This website" date="2020 - 2021" stack={["React.js", "SASS", "AWS Amplify"]}
+                            text={<span>
+                                This website was created to reflect my experience and achievements. It was created with React.js and hosted on AWS Amplify.
+                                The front page was animated so that it would seemlessly blend into either the "CV" page or the "Projects" page when the buttons were clicked.
+                                The background was given a type of parallax behaviour, allowing it to scroll at a slower rate than the rest of the site, allowing for a shofting pattern.
+                                The navigation bar at the side of the page displays where the user is on the page, what sections they can navigate too, and allows them to scroll back to the top.
+                            </span>}
+                        />
+
                         <PROJECT_SECTION slides={[bubble1, bubble2, bubble3, bubble4]} img={bubble} git="https://gitlab.com/Mcgregor381/bubble" heading="Bubble" date="2019 - 2020" stack={["HTML5", "PHP", "Javascript", "CSS3", "JQuery"]}
                             text={<span>With a team of 6 people in a university project, we created an application that allows for the control of smart devices within the home.
                                 It is possible to set timers, review statistics of the home, and toggle individual devices, whole rooms, or the entire house.</span>}
-                            // link="http://bubble.rorydobson.com/"
+                        // link="http://bubble.rorydobson.com/"
                         />
 
                         <PROJECT_SECTION slides={[maze1, maze2, maze3, maze4, maze5]} img={maze} git="https://gitlab.com/rmd5/maze" heading="Maze" date="2020" stack={["HTML5", "Javascript", "CSS3"]}
                             text={<span>Small maze game I created as a hobby. The aim is to get through the maze using a series of buttons.</span>}
-                            // link="https://rorydobson.com/maze"
+                        // link="https://rorydobson.com/maze"
                         />
 
                         <PROJECTS_NAV />
