@@ -94,7 +94,7 @@ class PROJECTS extends Component {
                             text={<span>
                                 This website was created to reflect my experience and achievements. It was created with React.js and hosted on AWS Amplify.
                                 The front page was animated so that it would seemlessly blend into either the "CV" page or the "Projects" page when the buttons were clicked.
-                                The background was given a type of parallax behaviour, allowing it to scroll at a slower rate than the rest of the site, allowing for a shofting pattern.
+                                The background was given a type of parallax behaviour, allowing it to scroll at a slower rate than the rest of the site, allowing for a shifting pattern.
                                 The navigation bar at the side of the page displays where the user is on the page, what sections they can navigate too, and allows them to scroll back to the top.
                             </span>}
                         />
