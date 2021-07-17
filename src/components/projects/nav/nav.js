@@ -27,23 +27,32 @@ class PROJECTS_NAV extends Component {
         } else {
             document.getElementById("talented_blob").style.visibility = "";
 
-            if (this.isInView("This website")) {
-                document.getElementById("this_blob").style.visibility = "visible";
+            if (this.isInView("StrathdonTennis.net")) {
+                document.getElementById("tennis_blob").style.visibility = "visible";
+                document.getElementById("this_blob").style.visibility = "";
                 document.getElementById("bubble_blob").style.visibility = "";
                 document.getElementById("maze_blob").style.visibility = "";
             } else {
-                document.getElementById("this_blob").style.visibility = "";
+                document.getElementById("tennis_blob").style.visibility = "";
 
-                if (this.isInView("Bubble")) {
-                    document.getElementById("bubble_blob").style.visibility = "visible";
+                if (this.isInView("This website")) {
+                    document.getElementById("this_blob").style.visibility = "visible";
+                    document.getElementById("bubble_blob").style.visibility = "";
                     document.getElementById("maze_blob").style.visibility = "";
                 } else {
-                    document.getElementById("bubble_blob").style.visibility = "";
+                    document.getElementById("this_blob").style.visibility = "";
 
-                    if (this.isInView("Maze")) {
-                        document.getElementById("maze_blob").style.visibility = "visible";
-                    } else {
+                    if (this.isInView("Bubble")) {
+                        document.getElementById("bubble_blob").style.visibility = "visible";
                         document.getElementById("maze_blob").style.visibility = "";
+                    } else {
+                        document.getElementById("bubble_blob").style.visibility = "";
+
+                        if (this.isInView("Maze")) {
+                            document.getElementById("maze_blob").style.visibility = "visible";
+                        } else {
+                            document.getElementById("maze_blob").style.visibility = "";
+                        }
                     }
                 }
             }
@@ -82,6 +91,15 @@ class PROJECTS_NAV extends Component {
                         <div className="blob" id="talented_blob"></div>
                         <div className="item">
                             TalentEd
+                        </div>
+                    </div>
+
+                    <div className="connect"></div>
+
+                    <div className="item_point" onClick={() => this.nav("StrathdonTennis.net")}>
+                        <div className="blob" id="tennis_blob"></div>
+                        <div className="item">
+                            StrathdonTennis.net
                         </div>
                     </div>
 

@@ -8,6 +8,8 @@ import talented from "../../../img/talented.svg";
 import bubble from "../../../img/bubble.png";
 import maze from "../../../img/maze.png";
 import profile from "../../../img/profile.jpg";
+import ball from "../../../img/ball.png"
+
 import PROJECTS_NAV from '../nav/nav';
 
 import maze1 from "../../../img/maze1.png";
@@ -15,6 +17,10 @@ import maze2 from "../../../img/maze2.png";
 import maze3 from "../../../img/maze3.png";
 import maze4 from "../../../img/maze4.png";
 import maze5 from "../../../img/maze5.png";
+
+import tennis1 from "../../../img/tennis1.png"
+import tennis2 from "../../../img/tennis2.png"
+import tennis3 from "../../../img/tennis3.png"
 
 import bubble1 from "../../../img/bubble1.png";
 import bubble2 from "../../../img/bubble2.png";
@@ -88,6 +94,14 @@ class PROJECTS extends Component {
                                 Help videos were included to guide users through the different features of the app, and iconography was implemented to help with user recall.
                             </span>}
                             link="https://talent-ed.app"
+                        />
+
+                        <PROJECT_SECTION slides={[tennis1, tennis2, tennis3]} img={ball} heading="StrathdonTennis.net" date="2021" stack={["React.js", "SASS"]}
+                            text={<span>
+                                For my community, I created a website for the local tennis court. It consists of a booking process, contacts, location and access to the community donation page.
+                                Growing up, I used the tennis court a lot, and I wanted to make it easier to use so that it could get the customer engagement it deserved (it's a really awesome tennis court!).
+                            </span>}
+                            link="https://strathdontennis.pages.dev"
                         />
 
                         <PROJECT_SECTION img={profile} git="https://gitlab.com/rmd5/portfolio" heading="This website" date="2020 - 2021" stack={["React.js", "SASS", "AWS Amplify"]}
