@@ -7,7 +7,7 @@ import PROJECT_SECTION from '../section/section';
 import talented from "../../../img/talented.svg";
 import bubble from "../../../img/bubble.png";
 import maze from "../../../img/maze.png";
-import profile from "../../../img/profile.jpg";
+import profile from "../../../img/profile_round.png";
 import ball from "../../../img/ball.png"
 
 import PROJECTS_NAV from '../nav/nav';

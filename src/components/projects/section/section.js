@@ -41,17 +41,17 @@ class PROJECT_SECTION extends Component {
                             {this.props.link ?
                                 <span>
                                     <br />
-                                View the app <a href={this.props.link} target="_blank" rel="noreferrer">here</a>
+                                    View the app <a href={this.props.link} target="_blank" rel="noreferrer">here</a>
                                 </span>
                                 : null}
                             {this.props.git ?
                                 <span>
                                     <br />
-                                View the git <a href={this.props.git} target="_blank" rel="noreferrer">here</a>
+                                    View the git <a href={this.props.git} target="_blank" rel="noreferrer">here</a>
                                 </span>
                                 : null}
                         </div>
-                        <div style={{ marginBottom: "30px", marginTop: "20px", textAlign: "center" }}>
+                        {this.props.slides ? <div style={{ marginBottom: "30px", marginTop: "20px", textAlign: "center" }}>
                             <Slider className="slideshow" {...settings}>
                                 {this.props.slides ? this.props.slides.map(e => {
                                     return <div className="img_wrap"><img src={e} className="project_image" alt="Project" ></img></div>
@@ -59,6 +59,7 @@ class PROJECT_SECTION extends Component {
                                     : null}
                             </Slider>
                         </div>
+                            : null}
                     </div>
                 </div>
             </div>

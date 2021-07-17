@@ -21,6 +21,7 @@ class PROJECTS_NAV extends Component {
     checkId() {
         if (this.isInView("TalentEd")) {
             document.getElementById("talented_blob").style.visibility = "visible";
+            document.getElementById("tennis_blob").style.visibility = "";
             document.getElementById("this_blob").style.visibility = "";
             document.getElementById("bubble_blob").style.visibility = "";
             document.getElementById("maze_blob").style.visibility = "";
