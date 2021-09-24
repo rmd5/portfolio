@@ -39,7 +39,7 @@ class CV extends Component {
     }
 
     change() {
-        document.getElementById("cv").style.opacity = "0";
+        document.getElementById("fade").style.opacity = "0";
         setTimeout(function () {
             history.push("/projects");
         }, 400);
@@ -63,23 +63,25 @@ class CV extends Component {
                     <div id="cv">
                         <Background />
                         <BackgroundMobile />
-                        <BIO />
-                        <EXPERIENCE />
-                        <EDUCATION />
-                        <TECHNICAL />
-                        <SKILLS />
-                        <INTERESTS />
+                        <div id="fade">
+                            <BIO />
+                            <EXPERIENCE />
+                            <EDUCATION />
+                            <TECHNICAL />
+                            <SKILLS />
+                            <INTERESTS />
 
-                        <div onClick={() => document.getElementById("main").scrollTo({ top: 0, behavior: 'smooth' })} style={{ visibility: this.state.top ? "visible" : "hidden" }} className="scroll_button">
-                            <div className="tooltip">Scroll to top</div>
-                            <div className="up">
-                                <Icon.ArrowUpShort />
+                            <div onClick={() => document.getElementById("main").scrollTo({ top: 0, behavior: 'smooth' })} style={{ visibility: this.state.top ? "visible" : "hidden" }} className="scroll_button">
+                                <div className="tooltip">Scroll to top</div>
+                                <div className="up">
+                                    <Icon.ArrowUpShort />
+                                </div>
                             </div>
+
+                            <div className="footer"></div>
+
+                            <NAV />
                         </div>
-
-                        <div className="footer"></div>
-
-                        <NAV />
                     </div>
                 </div>
             </div>
