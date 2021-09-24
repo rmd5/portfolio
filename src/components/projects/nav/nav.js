@@ -28,7 +28,7 @@ class PROJECTS_NAV extends Component {
         } else {
             document.getElementById("talented_blob").style.visibility = "";
 
-            if (this.isInView("StrathdonTennis.net")) {
+            if (this.isInView("Strathdon.net")) {
                 document.getElementById("tennis_blob").style.visibility = "visible";
                 document.getElementById("this_blob").style.visibility = "";
                 document.getElementById("bubble_blob").style.visibility = "";
@@ -97,10 +97,10 @@ class PROJECTS_NAV extends Component {
 
                     <div className="connect"></div>
 
-                    <div className="item_point" onClick={() => this.nav("StrathdonTennis.net")}>
+                    <div className="item_point" onClick={() => this.nav("Strathdon.net")}>
                         <div className="blob" id="tennis_blob"></div>
                         <div className="item">
-                            StrathdonTennis.net
+                            Strathdon.net
                         </div>
                     </div>
 

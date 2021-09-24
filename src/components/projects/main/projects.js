@@ -95,7 +95,7 @@ class PROJECTS extends Component {
                                 link="https://talent-ed.app"
                             />
 
-                            <PROJECT_SECTION slides={[tennis1, tennis2, tennis3]} img={ball} heading="StrathdonTennis.net" date="2021" stack={["React.js", "SASS"]}
+                            <PROJECT_SECTION slides={[tennis1, tennis2, tennis3]} img={ball} heading="Strathdon.net" date="2021" stack={["React.js", "SASS"]}
                                 text={<span>
                                     For my community, I created a website for the local tennis court. It consists of a booking process, contacts, location and access to the community donation page.
                                     Growing up, I used the tennis court a lot, and I wanted to make it easier to use so that it could get the customer engagement it deserved (it's a really awesome tennis court!).
@@ -107,8 +107,8 @@ class PROJECTS extends Component {
                                 text={<span>
                                     This website was created to reflect my experience and achievements. It was created with React.js and hosted on AWS Amplify.
                                     The front page was animated so that it would seemlessly blend into either the "CV" page or the "Projects" page when the buttons were clicked.
-                                    The background was given a type of parallax behaviour, allowing it to scroll at a slower rate than the rest of the site, allowing for a shifting pattern.
-                                    The navigation bar at the side of the page displays where the user is on the page, what sections they can navigate too, and allows them to scroll back to the top.
+                                    The background was given a type of parallax behaviour, allowing it to scroll at a slower rate than the rest of the site, creating a shifting pattern.
+                                    The navigation bar at the side of the page displays where the user is on the page, what sections they can navigate to, and allows them to scroll back to the top.
                                 </span>}
                             />
 
