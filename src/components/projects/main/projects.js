@@ -55,9 +55,7 @@ class PROJECTS extends Component {
     scrolled() {
         let y = document.getElementById("main").scrollTop;
         let top = false;
-        if (y > 300) {
-            top = true;
-        }
+        if (y > 300) { top = true }
         this.setState({
             top: top
         });
@@ -97,7 +95,7 @@ class PROJECTS extends Component {
                                 </span>}
                                 link="https://talent-ed.app"
                             />
-                            
+
                             <PROJECT_SECTION slides={[tennis1, tennis2, tennis3]} img={ball} heading="Strathdon.net" date="2021" stack={["React.js", "SASS"]}
                                 text={<span>
                                     For my community, I created a website for the local tennis court. It consists of a booking process, contacts, location and access to the community donation page.
