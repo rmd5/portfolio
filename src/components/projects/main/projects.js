@@ -37,9 +37,6 @@ import te7 from "../../../img/te7.png";
 import Background from '../../parallax/background';
 import BackgroundMobile from '../../parallax/background_mobile';
 
-import ScrollAnimation from "react-animate-on-scroll"
-import "animate.css/animate.min.css";
-
 class PROJECTS extends Component {
     constructor(props) {
         super(props);
