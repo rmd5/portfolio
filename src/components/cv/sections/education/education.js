@@ -6,7 +6,7 @@ import EXPERIENCE_SECTION from '../experience/section';
 class EDUCATION extends Component {
     render() {
         return (
-            <div className="section" id="education">
+            <div className="section" id="education" style={{ opacity: "0", transition: "0.4s all ease-in-out", transform: "translate(0, 100px)" }}>
                 <div className="heading">
                     Education
                 </div>

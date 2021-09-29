@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class SKILLS extends Component {
     render() {
         return (
-            <div className="section" id="skills">
+            <div className="section" id="skills" style={{ opacity: "0", transition: "0.4s all ease-in-out", transform: "translate(0, 100px)" }}>
                 <div className="heading">
                     Other skills
                 </div>

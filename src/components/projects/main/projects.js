@@ -37,6 +37,9 @@ import te7 from "../../../img/te7.png";
 import Background from '../../parallax/background';
 import BackgroundMobile from '../../parallax/background_mobile';
 
+import ScrollAnimation from "react-animate-on-scroll"
+import "animate.css/animate.min.css";
+
 class PROJECTS extends Component {
     constructor(props) {
         super(props);
@@ -94,7 +97,7 @@ class PROJECTS extends Component {
                                 </span>}
                                 link="https://talent-ed.app"
                             />
-
+                            
                             <PROJECT_SECTION slides={[tennis1, tennis2, tennis3]} img={ball} heading="Strathdon.net" date="2021" stack={["React.js", "SASS"]}
                                 text={<span>
                                     For my community, I created a website for the local tennis court. It consists of a booking process, contacts, location and access to the community donation page.

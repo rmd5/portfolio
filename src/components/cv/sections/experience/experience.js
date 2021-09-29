@@ -12,7 +12,7 @@ import toggle_accordion from '../../../../constants/accordion';
 class EXPERIENCE extends Component {
     render() {
         return (
-            <div className="section" id="experience">
+            <div className="section" id="experience" style={{ opacity: "0", transition: "0.4s all ease-in-out", transform: "translate(0, 100px)" }}>
                 <div className="heading">
                     Experience
                 </div>

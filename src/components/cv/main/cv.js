@@ -24,7 +24,39 @@ class CV extends Component {
     }
 
     componentDidMount() {
-        document.getElementById("main").addEventListener("scroll", () => this.scrolled());
+        document.getElementById("main").addEventListener("scroll", () => {
+            this.scrolled()
+        });
+    }
+
+    componentDidMount() {
+        this.fadeIn("biography")
+        this.fadeIn("education")
+        this.fadeIn("experience")
+        this.fadeIn("interests")
+        this.fadeIn("skills")
+        this.fadeIn("technical")
+        document.getElementById("main").addEventListener("scroll", e => {
+            this.fadeIn("biography")
+            this.fadeIn("education")
+            this.fadeIn("experience")
+            this.fadeIn("interests")
+            this.fadeIn("skills")
+            this.fadeIn("technical")
+        });
+    }
+
+    fadeIn(id) {
+        if (this.isInView(id)) {
+            document.getElementById(id).style.opacity = "1"
+            document.getElementById(id).style.transform = "translate(0,0)"
+        }
+    }
+
+    isInView(id) {
+        let offset = 200;
+        const top = document.getElementById(id).getBoundingClientRect().top;
+        return (top + offset) >= 0 && (top + offset) <= window.innerHeight;
     }
 
     scrolled() {
