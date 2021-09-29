@@ -24,12 +24,6 @@ class CV extends Component {
     }
 
     componentDidMount() {
-        document.getElementById("main").addEventListener("scroll", () => {
-            this.scrolled()
-        });
-    }
-
-    componentDidMount() {
         this.fadeIn("biography")
         this.fadeIn("education")
         this.fadeIn("experience")
@@ -37,6 +31,7 @@ class CV extends Component {
         this.fadeIn("skills")
         this.fadeIn("technical")
         document.getElementById("main").addEventListener("scroll", e => {
+            this.scrolled()
             this.fadeIn("biography")
             this.fadeIn("education")
             this.fadeIn("experience")
