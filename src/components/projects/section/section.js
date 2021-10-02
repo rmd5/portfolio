@@ -20,14 +20,14 @@ class PROJECT_SECTION extends Component {
     }
 
     isInView(id) {
-        let offset = 200;
+        let offset = 150;
         const top = document.getElementById(id).getBoundingClientRect().top;
         return (top + offset) >= 0 && (top + offset) <= window.innerHeight;
     }
 
     render() {
         return (
-            <div className="section" id={this.props.heading} style={{ opacity: "0", transition: "0.4s all ease-in-out", transform: "translate(0, 100px)" }}>
+            <div className="section" id={this.props.heading} style={{ opacity: "0", transform: "translate(0, 100px)" }}>
                 <div className="heading" style={{ lineHeight: "70px" }}>
                     {this.props.img ? <img className="logo" src={this.props.img} alt="Logo"></img> : null} {this.props.heading}
                 </div>

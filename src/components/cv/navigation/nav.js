@@ -94,10 +94,14 @@ class NAV extends Component {
 
     render() {
         let percent = this.state.scroll;
+        let root = window.getComputedStyle(document.documentElement)
+        let orange = root.getPropertyValue('--orange');
+        let grey = root.getPropertyValue('--grey')
+        console.log(grey)
         return (
             <div className="nav">
                 <div className="content">
-                    <div className="scroll_monitor" style={{ backgroundImage: "linear-gradient(#464646 0%, #464646 " + percent + ", #ECA420 " + percent + ", #ECA420 100%)" }}></div>
+                    <div className="scroll_monitor" style={{ backgroundImage: "linear-gradient(rgba(" + grey + ", 1) 0%, rgba(" + grey + ", 1) " + percent + ", rgba(" + orange + ", 1) " + percent + ", rgba(" + orange + ", 1) 100%)" }}></div>
 
                     <div className="item_point" onClick={() => this.nav("biography")}>
                         <div className="blob" id="biography_blob"></div>

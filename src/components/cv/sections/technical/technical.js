@@ -5,7 +5,7 @@ import TECHNICAL_SECTION from './section';
 class TECHNICAL extends Component {
     render() {
         return (
-            <div className="section" id="technical" style={{ opacity: "0", transition: "0.4s all ease-in-out", transform: "translate(0, 100px)" }}>
+            <div className="section" id="technical" style={{ opacity: "0", transform: "translate(0, 100px)" }}>
                 <div className="heading">
                     Technical skills
                 </div>

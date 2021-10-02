@@ -1,8 +1,9 @@
 .section
     margin-bottom: 50px
-    box-shadow: 2px 0px 0px $orange inset
+    box-shadow: 2px 0px 0px rgba($orange, 1) inset
     position: relative
     overflow: hidden
+    transition: all 0.4s ease-in-out, color 0s
 
     .accordion
         max-height: 0px
@@ -10,24 +11,24 @@
         transition: all 0.2s ease-in-out
 
     .dropper, .dropper_projects
-        border: 2px solid $orange
+        border: 2px solid rgba($orange, 1)
         width: 30px
         height: 99px
         position: absolute
         top: 39px
         left: -33px
         transform: rotate(30deg)
-        background-color: white
+        background-color: rgba($white, 1)
         padding: 2px
 
     .dropper_projects
         top: 74px
 
     .heading
-        font-size: 30px
+        font-size: calc(var(--font-size) + 14px)
         line-height: 35px
-        font-family: $sans
-        border-bottom: 2px solid $orange
+        font-family: $content
+        border-bottom: 2px solid rgba($orange, 1)
         padding: 10px
         width: 75%
         padding-left: 30px
@@ -42,8 +43,9 @@
         margin-top: 40px
 
         .bio_text
-            font-family: $sans
+            font-family: $content
             padding-left: 20px
+            font-size: var(--font-size)
 
         .logo
             display: inline-block
@@ -57,28 +59,30 @@
             width: calc(100% - 90px)
 
             .sub_heading
-                font-family: $sans
+                font-family: $content
                 font-size: 20px
+                font-size: calc(var(--font-size) + 4px)
 
             .date
-                font-family: $sans
-                font-size: 12px
+                font-family: $content
+                font-size: calc(var(--font-size) - 4px)
                 margin-bottom: 20px
-                color: $grey
+                color: rgba($grey, 1)
 
             .text
-                font-family: $sans
-                line-height: 24px
+                font-family: $content
+                line-height: calc(var(--font-size) + 8px)
+                font-size: $content_size
 
             .skill
-                font-family: $sans
+                font-family: $content
                 display: inline-block
                 width: calc(100% - 110px)
                 margin-right: 10px
 
     hr
         border: none
-        border-top: 1px solid $teal
+        border-top: 1px solid rgba($teal, 1)
         height: 0px
         margin-top: 40px
         margin-bottom: 20px

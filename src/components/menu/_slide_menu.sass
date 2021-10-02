@@ -1,0 +1,67 @@
+.gear
+    position: fixed
+    z-index: 99
+    top: 15px
+    right: 15px
+    color: rgba($black, 1)
+    font-size: 30px
+    cursor: pointer
+
+.slide_menu
+    transform: translate(100%, 0px)
+    transition: transform 0.2s ease-in-out
+    max-width: calc(100% - 70px)
+    width: 400px
+    background-color: rgba($white, 1)
+    height: 100vh
+    position: fixed
+    right: 0px
+    z-index: 100
+    border-left: 2px solid rgba($black, 1)
+
+    .scroller
+        height: calc(100% - 15px)
+        overflow: scroll
+        padding: 15px
+
+        .contact
+            text-align: center
+
+            .icon
+                display: inline-block
+                margin: 10px 5px
+                font-size: 35px
+                color: black
+                border-radius: 50%
+                height: 38px
+                background-color: rgba(white, 0.6)
+
+                .contact_img
+                    width: calc(var(--font-size) + 24px)
+                    margin: -1px
+
+                    &:hover
+                        background-color: rgba($teal, 0.1)
+
+        .X
+            text-align: left
+            color: rgba($black, 1)
+            font-size: 45px
+            margin-left: -13px
+            margin-top: -13px
+            cursor: pointer
+
+        .menu_heading
+            font-family: $content
+            font-size: calc(var(--font-size))
+            margin-bottom: 15px
+            margin-top: 15px
+            color: rgba($black, 1)
+
+        button
+            margin: 0px
+            width: 100%
+            margin-bottom: 5px
+
+            &.active
+                background-color: rgba($teal, 0.3)

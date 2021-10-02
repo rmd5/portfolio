@@ -4,12 +4,16 @@ import gitlab from "../../img/gitlab.png"
 import github from "../../img/github.png"
 import linkedin from "../../img/linkedin.png"
 import email from "../../img/email.png"
+import glasses from "../../img/glasses.png"
 
 function HEADER() {
     return (
         <div>
             <div className="header" id="header">
-                <img className="profile" src={profile} alt="Rory" />
+                <div className="image_block">
+                    <img className="profile" src={profile} alt="Rory" />
+                    <img style={{display: localStorage.getItem("theme") === "clown" ? "block" : "none"}} className="glasses" src={glasses} alt="Clown glasses" />
+                </div>
                 <br className="mobile" />
                 <div className="name_box">
                     <div className="name">

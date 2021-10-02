@@ -7,6 +7,7 @@
     overflow: overlay
     position: relative
     overflow-x: hidden
+    color: rgba($black, 1)
 
     .content
         width: 800px
@@ -16,14 +17,14 @@
         text-align: left
         position: relative
         overflow: hidden
-        margin-right: 300px
+        margin-right: 200px
         margin-left: 15px
 
         #fade
-            transition: 0.4s all ease-in-out
+            transition: all 0.4s ease-in-out, color 0s
 
         #cv, #projects, #landing
-            transition: 0.4s all ease-in-out
+            transition: all 0.4s ease-in-out, color 0s
 
             .box
                 width: 100%
@@ -40,16 +41,16 @@
             width: 50px
             height: 48px
             border-radius: 50%
-            border: 2px solid $orange
+            border: 2px solid rgba($orange, 1)
             position: fixed
             bottom: 20px
             right: 20px
-            color: $grey
+            color: rgba($grey, 1)
             font-size: 40px
             text-align: center
             padding-top: 2px
-            background-color: rgba(white, 0.9)
-            font-family: $sans
+            background-color: rgba($white, 1)
+            font-family: $content
             cursor: pointer
 
             .tooltip
@@ -60,6 +61,7 @@
                 text-align: right
                 font-size: 16px
                 width: 96px
+                color: rgba($black, 1)
 
         .footer
             display: none
@@ -77,11 +79,11 @@
             transform: translate(0%, 0%)
             bottom: 0px
             left: calc(50% - 7px)
-            font-family: $sans
+            font-family: $content
 
             span
                 cursor: pointer
-                color: $orange
+                color: rgba($orange, 1)
 
                 .arrow
                     font-size: 24px
@@ -98,11 +100,20 @@
                 top: 0px
                 left: 0px
 
-            .profile
-                width: 250px
-                border-radius: 50%
+            .image_block
                 display: inline-block
                 vertical-align: middle
+                position: relative
+
+                .profile
+                    width: 250px
+                    border-radius: 50%
+
+                .glasses
+                    position: absolute
+                    top: 75px
+                    left: 60px
+                    width: 60px
 
             .mobile
                 display: none
@@ -111,14 +122,14 @@
                 display: inline-block
                 vertical-align: middle
                 margin-left: 20px
-                font-size: 50px
-                font-family: $sans
+                font-family: $content
                 text-align: center
 
                 .name
-                    border-bottom: 2px solid $orange
+                    border-bottom: 2px solid rgba($orange, 1)
                     padding: 10px 0px
                     position: relative
+                    font-size: 50px
 
                     .description
                         position: absolute
@@ -128,7 +139,7 @@
                         display: block
                         font-size: 16px
                         text-align: left
-                        color: $medium
+                        color: rgba($grey, 1)
 
                 .icon
                     display: inline-block
@@ -136,10 +147,12 @@
                     font-size: 35px
                     color: black
                     border-radius: 50%
-                    height: 40px
+                    height: 38px
+                    background-color: rgba(white, 0.6)
 
                     .contact_img
                         width: 40px
+                        margin: -1px
 
                     &:hover
                         background-color: rgba($teal, 0.1)

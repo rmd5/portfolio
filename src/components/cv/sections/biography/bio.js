@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class BIO extends Component {
     render() {
         return (
-            <div className="section" id="biography" style={{ opacity: "0", transition: "0.4s all ease-in-out", transform: "translate(0, 100px)" }} >
+            <div className="section" id="biography" style={{ opacity: "0", transform: "translate(0, 100px)" }} >
                 <div className="heading">
                     About me
                 </div>

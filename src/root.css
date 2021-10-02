@@ -1,0 +1,29 @@
+/* Light mode */
+:root {
+    --orange: 236, 164, 32;
+    --teal: 0, 128, 128;
+    --black: 0, 0, 0;
+    --grey: 70, 70, 70;
+    --medium: 131, 131, 131;
+    --light: 218, 218, 218;
+    --white: 255, 255, 255;
+    --dark: 70, 70, 70;
+    --heading: 'Roboto', sans-serif;
+    --content: 'Roboto', sans-serif;
+
+    --font-size: 16px;
+}
+
+/* Dark mode */
+/* :root {
+    --orange: 236, 164, 32;
+    --teal: 0, 128, 128;
+    --black: 177, 194, 203;
+    --grey: 77, 84, 93;
+    --medium: 131, 131, 131;
+    --light: 218, 218, 218;
+    --white: 27, 34, 43;
+    --dark: 255, 255, 255;
+    --heading: 'Roboto', sans-serif;
+    --content: 'Roboto', sans-serif;
+} */

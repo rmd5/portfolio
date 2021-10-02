@@ -49,7 +49,7 @@ class CV extends Component {
     }
 
     isInView(id) {
-        let offset = 200;
+        let offset = 150;
         const top = document.getElementById(id).getBoundingClientRect().top;
         return (top + offset) >= 0 && (top + offset) <= window.innerHeight;
     }
