@@ -25,8 +25,8 @@ export default function Menu(props) {
             <div className="gear" onClick={() => {
                 document.getElementById("menu").style.transform = "translate(0px, 0px)"
             }}>
-                {/* <Icon.GearFill /> */}
-                <i class="fas fa-cogs"></i>
+                <Icon.List />
+                {/* <i class="fas fa-cogs"></i> */}
             </div>
 
             <div className="slide_menu" id="menu">
