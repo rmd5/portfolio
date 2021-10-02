@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as Icon from "react-bootstrap-icons"
 import gitlab from "../../img/gitlab.png"
 import github from "../../img/github.png"
 import linkedin from "../../img/linkedin.png"
 import email from "../../img/email.png"
+import history from '../../history';
 
 export default function Menu(props) {
+    const [link, setLink] = useState(window.location.pathname)
+
     function setTheme(theme) {
         try {
             localStorage.setItem("theme", theme)
@@ -18,6 +21,15 @@ export default function Menu(props) {
             localStorage.setItem("size", size)
             props.setSize(size)
         } catch (err) { }
+    }
+
+    function change(page) {
+        document.getElementById("menu").style.transform = "translate(100%, 0px)"
+        document.getElementById("fade").style.opacity = "0";
+        setTimeout(function () {
+            history.push("/" + page);
+            setLink("/" + page)
+        }, 400);
     }
 
     return (
@@ -54,6 +66,16 @@ export default function Menu(props) {
                             {/* <i class="far fa-envelope"></i> */}
                             <img className="contact_img" src={email} alt="email" />
                         </a>
+                    </div>
+
+                    <div className="link_to_other">
+                        Check out my&nbsp;
+                        {
+                            window.location.pathname === "/cv" ?
+                                <span onClick={() => change("projects")}>projects<div className="arrow"><Icon.ArrowRightShort /></div></span>
+                                :
+                                <span onClick={() => change("cv")}>CV<div className="arrow"><Icon.ArrowRightShort /></div></span>
+                        }
                     </div>
 
                     <div className="menu_heading">Theme</div>

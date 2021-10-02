@@ -97,7 +97,6 @@ class NAV extends Component {
         let root = window.getComputedStyle(document.documentElement)
         let orange = root.getPropertyValue('--orange');
         let grey = root.getPropertyValue('--grey')
-        console.log(grey)
         return (
             <div className="nav">
                 <div className="content">
