@@ -51,7 +51,7 @@ function App() {
 			root.setProperty('--grey', "255, 0, 0")
 			root.setProperty('--medium', "131, 131, 131")
 			root.setProperty('--light', "218, 218, 218")
-			root.setProperty('--white', "100, 255, 0")
+			root.setProperty('--white', "60, 185, 0")
 			root.setProperty('--dark', "70, 70, 70")
 			root.setProperty('--heading', "'Kranky', cursive")
 			root.setProperty('--content', "'Kranky', cursive")
