@@ -43,7 +43,9 @@ export default function Menu(props) {
     return (
         <>
             <div className={"gear " + props.position} onClick={() => openMenu("open")}>
+                {props.position === "right" ? <div className="tooltip right">Menu</div> : null}
                 <Icon.List />
+                {props.position === "left" ? <div className="tooltip left">Menu</div> : null}
                 {/* <i class="fas fa-cogs"></i> */}
             </div>
 
@@ -85,7 +87,7 @@ export default function Menu(props) {
                     <div className="menu_heading">Theme</div>
                     <button className={props.theme === "light" ? "active" : ""} onClick={() => setTheme("light")}>Light theme</button>
                     <button className={props.theme === "dark" ? "active" : ""} onClick={() => setTheme("dark")}>Dark theme</button>
-                    <button className={props.theme === "mono-light" ? "active" : ""} onClick={() => setTheme("mono-light")}>Monochrome</button>
+                    <button className={props.theme === "mono-light" ? "active" : ""} onClick={() => setTheme("mono-light")}>Old timey</button>
                     <button className={props.theme === "clown" ? "active" : ""} onClick={() => setTheme("clown")}>Clown theme</button>
                     {/* <button className={props.theme === "mono-dark" ? "active" : ""} onClick={() => setTheme("mono-dark")}>Mono-dark</button> */}
 

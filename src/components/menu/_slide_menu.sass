@@ -12,6 +12,18 @@
     &.left
         left: 20px
 
+    .tooltip
+        font-size: 16px
+        font-family: $content
+        display: inline-block
+        vertical-align: super
+
+        &.right
+            margin-right: 5px
+
+        &.left
+            margin-left: 5px
+
 .slide_menu
     display: none
     transform: var(--menu-closed)
@@ -69,6 +81,7 @@
                     font-size: 24px
                     display: inline-block
                     vertical-align: middle
+                    line-height: 24px
 
         .X
             color: rgba($black, 1)
@@ -90,3 +103,15 @@
 
             &.active
                 background-color: rgba($teal, 0.3)
+
+@media (max-width: 1250px)
+    .gear
+        .tooltip
+            &.left
+                display: none
+
+@media (max-width: 1050px)
+    .gear
+        .tooltip
+            &.right
+                display: none

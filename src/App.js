@@ -13,6 +13,8 @@ function App() {
 	const [size, setSize] = useState(localStorage.getItem("size") || "small")
 	const [menuPosition, setMenuPosition] = useState(localStorage.getItem("position") || "right")
 
+	const [initial, setInitial] = useState(16)
+
 	useEffect(() => {
 		try {
 			setTheme(localStorage.getItem("theme") || "light")
@@ -26,6 +28,7 @@ function App() {
 	useEffect(() => {
 		let root = document.documentElement.style
 		if (theme === "dark") {
+			setInitial(16)
 			root.setProperty('--orange', '236, 164, 32')
 			root.setProperty('--teal', "0, 128, 128")
 			root.setProperty('--black', "177, 194, 203")
@@ -45,9 +48,17 @@ function App() {
 			root.setProperty('--light', "218, 218, 218")
 			root.setProperty('--white', "255, 255, 255")
 			root.setProperty('--dark', "70, 70, 70")
-			root.setProperty('--heading', "'Roboto', sans-serif")
-			root.setProperty('--content', "'Roboto', sans-serif")
+			if (theme === "mono-light") {
+				root.setProperty('--heading', "'Homemade Apple', cursive")
+				root.setProperty('--content', "'Homemade Apple', cursive")
+				setInitial(14)
+			} else {
+				root.setProperty('--heading', "'Roboto', sans-serif")
+				root.setProperty('--content', "'Roboto', sans-serif")
+				setInitial(16)
+			}
 		} else if (theme === "clown") {
+			setInitial(16)
 			root.setProperty('--orange', '0, 0, 255')
 			root.setProperty('--teal', "60, 185, 0")
 			root.setProperty('--black', "255, 255, 0")
@@ -62,18 +73,19 @@ function App() {
 	}, [theme])
 
 	useEffect(() => {
+		console.log(initial)
 		let root = document.documentElement.style
-		if(size === "x-small") root.setProperty("--font-size", "12px")
-		else if(size === "small") root.setProperty("--font-size", "16px")
-		else if(size === "medium") root.setProperty("--font-size", "20px")
-		else if(size === "large") root.setProperty("--font-size", "24px")
-		else if(size === "x-large") root.setProperty("--font-size", "28px")
-	}, [size])
+		if (size === "x-small") root.setProperty("--font-size", (initial - 4) + "px")
+		else if (size === "small") root.setProperty("--font-size", (initial) + "px")
+		else if (size === "medium") root.setProperty("--font-size", (initial + 4) + "px")
+		else if (size === "large") root.setProperty("--font-size", (initial + 8) + "px")
+		else if (size === "x-large") root.setProperty("--font-size", (initial + 12) + "px")
+	}, [size, initial])
 
 	useEffect(() => {
 		let root = document.documentElement.style
-		if(menuPosition === "left") root.setProperty("--menu-closed", "translate(-100%, 0px)")
-		else if(menuPosition === "right") root.setProperty("--menu-closed", "translate(100%, 0px)")
+		if (menuPosition === "left") root.setProperty("--menu-closed", "translate(-100%, 0px)")
+		else if (menuPosition === "right") root.setProperty("--menu-closed", "translate(100%, 0px)")
 		document.getElementById("menu").style.display = "block"
 	}, [menuPosition])
 
