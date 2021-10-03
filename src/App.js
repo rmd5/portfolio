@@ -6,6 +6,7 @@ import LANDING from "./components/landing/main/landing";
 import PROJECTS from "./components/projects/main/projects";
 import { useEffect, useState } from "react";
 import Menu from "./components/menu/menu";
+import Lost from "./components/lost/lost";
 
 function App() {
 	const [theme, setTheme] = useState(localStorage.getItem("theme") || "light")
@@ -84,6 +85,8 @@ function App() {
 					<Route exact path="/" component={LANDING} />
 					<Route path="/cv" component={CV} />
 					<Route path="/projects" component={PROJECTS} />
+
+					<Route path="/" component={Lost} />
 				</Switch>
 			</Router>
 		</div>
