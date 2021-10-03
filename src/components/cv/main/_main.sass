@@ -74,22 +74,6 @@
             width: 420px
             border-radius: 20px
 
-        .link_to_other
-            position: absolute
-            transform: translate(0%, 0%)
-            bottom: 0px
-            left: calc(50% - 7px)
-            font-family: $content
-
-            span
-                cursor: pointer
-                color: rgba($orange, 1)
-
-                .arrow
-                    font-size: 24px
-                    display: inline-block
-                    vertical-align: middle
-
         .header
             margin-top: 30px
             margin-bottom: 50px
@@ -114,6 +98,7 @@
                     top: 75px
                     left: 60px
                     width: 60px
+                    animation: none
 
             .mobile
                 display: none
@@ -124,6 +109,7 @@
                 margin-left: 20px
                 font-family: $content
                 text-align: center
+                position: relative
 
                 .name
                     border-bottom: 2px solid rgba($orange, 1)
@@ -156,3 +142,34 @@
 
                     &:hover
                         background-color: rgba($teal, 0.1)
+
+                .link_to_other
+                    position: absolute
+                    transform: translate(0%, 0%)
+                    bottom: -40px
+                    left: 0px
+                    font-family: $content
+
+                    span
+                        cursor: pointer
+                        color: rgba($orange, 1)
+
+                        .arrow
+                            font-size: 24px
+                            display: inline-block
+                            vertical-align: middle
+
+            &:hover
+                .image_block
+                    .glasses
+                        animation: shake 0.2s infinite
+
+@keyframes shake
+    0%, 50%, 100%
+        transform: rotate(0deg)
+
+    25%
+        transform: rotate(-10deg)
+
+    75%
+        transform: rotate(10deg)

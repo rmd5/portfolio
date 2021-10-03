@@ -5,6 +5,7 @@ import github from "../../img/github.png"
 import linkedin from "../../img/linkedin.png"
 import email from "../../img/email.png"
 import history from '../../history';
+import openMenu from './open_menu';
 
 export default function Menu(props) {
     const [link, setLink] = useState(window.location.pathname)
@@ -23,8 +24,15 @@ export default function Menu(props) {
         } catch (err) { }
     }
 
+    function setPosition(pos) {
+        try {
+            localStorage.setItem("position", pos)
+            props.setPosition(pos)
+        } catch (err) { }
+    }
+
     function change(page) {
-        document.getElementById("menu").style.transform = "translate(100%, 0px)"
+        openMenu("close")
         document.getElementById("fade").style.opacity = "0";
         setTimeout(function () {
             history.push("/" + page);
@@ -34,18 +42,14 @@ export default function Menu(props) {
 
     return (
         <>
-            <div className="gear" onClick={() => {
-                document.getElementById("menu").style.transform = "translate(0px, 0px)"
-            }}>
+            <div className={"gear " + props.position} onClick={() => openMenu("open")}>
                 <Icon.List />
                 {/* <i class="fas fa-cogs"></i> */}
             </div>
 
-            <div className="slide_menu" id="menu">
+            <div className={"slide_menu " + props.position} id="menu">
                 <div className="scroller">
-                    <div className="X" onClick={() => {
-                        document.getElementById("menu").style.transform = "translate(100%, 0px)"
-                    }}>
+                    <div style={{ textAlign: props.position === "right" ? "left" : "right" }} className="X" onClick={() => openMenu("close")}>
                         <Icon.X />
                     </div>
 
@@ -81,8 +85,8 @@ export default function Menu(props) {
                     <div className="menu_heading">Theme</div>
                     <button className={props.theme === "light" ? "active" : ""} onClick={() => setTheme("light")}>Light theme</button>
                     <button className={props.theme === "dark" ? "active" : ""} onClick={() => setTheme("dark")}>Dark theme</button>
-                    <button className={props.theme === "clown" ? "active" : ""} onClick={() => setTheme("clown")}>Clown theme</button>
                     <button className={props.theme === "mono-light" ? "active" : ""} onClick={() => setTheme("mono-light")}>Monochrome</button>
+                    <button className={props.theme === "clown" ? "active" : ""} onClick={() => setTheme("clown")}>Clown theme</button>
                     {/* <button className={props.theme === "mono-dark" ? "active" : ""} onClick={() => setTheme("mono-dark")}>Mono-dark</button> */}
 
                     <div className="menu_heading">Font size</div>
@@ -91,6 +95,10 @@ export default function Menu(props) {
                     <button className={props.size === "medium" ? "active" : ""} onClick={() => setSize("medium")}>Medium</button>
                     <button className={props.size === "large" ? "active" : ""} onClick={() => setSize("large")}>Large</button>
                     <button className={props.size === "x-large" ? "active" : ""} onClick={() => setSize("x-large")}>X-Large</button>
+
+                    <div className="menu_heading">Menu position</div>
+                    <button className={props.position === "left" ? "active" : ""} onClick={() => setPosition("left")}>Left</button>
+                    <button className={props.position === "right" ? "active" : ""} onClick={() => setPosition("right")}>Right</button>
                 </div>
             </div>
         </>

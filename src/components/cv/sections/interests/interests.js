@@ -6,8 +6,8 @@ class INTERESTS extends Component {
             <div className="section" id="interests" style={{ opacity: "0", transform: "translate(0, 100px)" }}>
                 <div className="heading">
                     Interests
+                    <div className="dropper"></div>
                 </div>
-                <div className="dropper"></div>
 
                 <div className="sub_section">
                     <div className="sub_content" style={{ width: "calc(100% - 20px)" }}>

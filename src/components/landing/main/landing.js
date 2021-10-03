@@ -20,7 +20,7 @@ class LANDING extends Component {
             <div className="landing_wrap main" id="main">
                 <div className="content" id="content">
                     <div className="landing" id="landing">
-                        <HEADER />
+                        <HEADER noLink />
                         <div className="background_wrapper">
                             <Background />
                         </div>

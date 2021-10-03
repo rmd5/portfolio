@@ -2,27 +2,40 @@
     position: fixed
     z-index: 99
     top: 20px
-    right: 20px
     color: rgba($black, 1)
     font-size: 40px
     cursor: pointer
 
+    &.right
+        right: 20px
+
+    &.left
+        left: 20px
+
 .slide_menu
-    transform: translate(100%, 0px)
+    display: none
+    transform: var(--menu-closed)
     transition: transform 0.2s ease-in-out
     max-width: calc(100% - 70px)
     width: 400px
     background-color: rgba($white, 1)
     height: 100vh
     position: fixed
-    right: 0px
     z-index: 100
-    border-left: 2px solid rgba($black, 1)
+
+    &.right
+        right: 0px
+        border-left: 2px solid rgba($black, 1)
+
+    &.left
+        left: 0px
+        border-right: 2px solid rgba($black, 1)
 
     .scroller
         height: calc(100% - 15px)
         overflow: scroll
         padding: 15px
+        margin-right: -1px
 
         .contact
             text-align: center
@@ -33,7 +46,7 @@
                 font-size: 35px
                 color: black
                 border-radius: 50%
-                height: 38px
+                height: calc(var(--font-size) + 22px)
                 background-color: rgba(white, 0.6)
 
                 .contact_img
@@ -58,11 +71,9 @@
                     vertical-align: middle
 
         .X
-            text-align: left
             color: rgba($black, 1)
             font-size: 45px
-            margin-left: -13px
-            margin-top: -13px
+            margin: -13px
             cursor: pointer
 
         .menu_heading

@@ -5,14 +5,25 @@ import github from "../../img/github.png"
 import linkedin from "../../img/linkedin.png"
 import email from "../../img/email.png"
 import glasses from "../../img/glasses.png"
+import * as Icon from "react-bootstrap-icons"
+import history from '../../history';
+import openMenu from '../menu/open_menu';
 
-function HEADER() {
+function HEADER(props) {
+    function change(page) {
+        openMenu("close")
+        document.getElementById("fade").style.opacity = "0";
+        setTimeout(function () {
+            history.push("/" + page)
+        }, 400);
+    }
+
     return (
         <div>
             <div className="header" id="header">
                 <div className="image_block">
                     <img className="profile" src={profile} alt="Rory" />
-                    <img style={{display: localStorage.getItem("theme") === "clown" ? "block" : "none"}} className="glasses" src={glasses} alt="Clown glasses" />
+                    <img style={{ display: localStorage.getItem("theme") === "clown" ? "block" : "none" }} className="glasses" src={glasses} alt="Clown glasses" />
                 </div>
                 <br className="mobile" />
                 <div className="name_box">
@@ -39,6 +50,15 @@ function HEADER() {
                             {/* <i class="far fa-envelope"></i> */}
                             <img className="contact_img" src={email} alt="email" />
                         </a>
+                    </div>
+                    <div className="link_to_other" style={{display: props.noLink ? "none" : ""}}>
+                        Check out my&nbsp;
+                        {
+                            window.location.pathname === "/cv" ?
+                                <span onClick={() => change("projects")}>projects<div className="arrow"><Icon.ArrowRightShort /></div></span>
+                                :
+                                <span onClick={() => change("cv")}>CV<div className="arrow"><Icon.ArrowRightShort /></div></span>
+                        }
                     </div>
                 </div>
             </div>

@@ -8,6 +8,10 @@
     --light: 218, 218, 218;
     --white: 255, 255, 255;
     --dark: 70, 70, 70;
+
+    --menu-open: translate(0%, 0px);
+    --menu-closed: translate(100%, 0px);
+
     --heading: 'Roboto', sans-serif;
     --content: 'Roboto', sans-serif;
 

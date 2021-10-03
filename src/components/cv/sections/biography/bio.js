@@ -6,8 +6,8 @@ class BIO extends Component {
             <div className="section" id="biography" style={{ opacity: "0", transform: "translate(0, 100px)" }} >
                 <div className="heading">
                     About me
+                    <div className="dropper"></div>
                 </div>
-                <div className="dropper"></div>
                 <div className="sub_section">
                     <div className="sub_heading"></div>
                     <div className="bio_text">

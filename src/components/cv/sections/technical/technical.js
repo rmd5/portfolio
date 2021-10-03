@@ -8,6 +8,7 @@ class TECHNICAL extends Component {
             <div className="section" id="technical" style={{ opacity: "0", transform: "translate(0, 100px)" }}>
                 <div className="heading">
                     Technical skills
+                    <div className="dropper"></div>
                 </div>
                 <div className="dropper"></div>
                 <div className="sub_section">

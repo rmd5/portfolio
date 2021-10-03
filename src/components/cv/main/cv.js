@@ -12,6 +12,7 @@ import * as Icon from "react-bootstrap-icons";
 import history from '../../../history';
 import Background from '../../parallax/background';
 import BackgroundMobile from '../../parallax/background_mobile';
+import openMenu from '../../menu/open_menu';
 
 smoothscroll.polyfill();
 
@@ -78,13 +79,10 @@ class CV extends Component {
 
     render() {
         return (
-            <div className="main" id="main">
+            <div className="main" id="main" onClick={() => openMenu("close")}>
                 <div className="content">
                     <div style={{ position: "relative" }}>
                         <HEADER />
-                        <div className="link_to_other">
-                            Check out my <span onClick={() => this.change()}>projects<div className="arrow"><Icon.ArrowRightShort /></div></span>
-                        </div>
                     </div>
 
                     <div id="cv">

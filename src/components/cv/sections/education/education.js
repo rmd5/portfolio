@@ -9,8 +9,9 @@ class EDUCATION extends Component {
             <div className="section" id="education" style={{ opacity: "0", transform: "translate(0, 100px)" }}>
                 <div className="heading">
                     Education
+                    <div className="dropper"></div>
                 </div>
-                <div className="dropper"></div>
+
                 <EXPERIENCE_SECTION img={hw} title="Computer Science at Heriot Watt" date="2017 - 2021" text="I graduated from Heriot Watt University with a Bachelor of Science in Computer Science with Honours of the First Class Award. For my dissertation project, in which I created a web app to help the sharing of knowledge within the Rohingya communities of Malaysia, I earned the Cooper-Walker Engineering Ltd Prize." />
                 <hr />
                 <EXPERIENCE_SECTION img={hw} title="Actuarial Science at Heriot Watt" date="2016 - 2017" text="Actuarial Science first year, studying statistics, economics, finance and calculus." />

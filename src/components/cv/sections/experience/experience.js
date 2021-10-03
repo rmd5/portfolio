@@ -15,8 +15,8 @@ class EXPERIENCE extends Component {
             <div className="section" id="experience" style={{ opacity: "0", transform: "translate(0, 100px)" }}>
                 <div className="heading">
                     Experience
+                    <div className="dropper"></div>
                 </div>
-                <div className="dropper"></div>
                 <EXPERIENCE_SECTION img={free} title="Full Stack Developer at Free.co.uk" date="2020 - Present" text="I am currently working as a full stack developer for the fintech/proptech B2C startup Free.co.uk. I have been creating dynamic content in React.js and Node.js with the idea of providing a simple, one-stop shop for users trying to sell their own property." />
                 <hr />
                 <EXPERIENCE_SECTION img={bright} title="Technology Intern at Bright Network" date="2020" text="I completed a virtual internship in technology with Bright Network. It consisted of seminars from leading technology companies, including Google, Amazon and Bloomberg, a real-world project, and the opportunity to network with like-minded people." />

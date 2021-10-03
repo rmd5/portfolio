@@ -10,28 +10,50 @@
         overflow: hidden
         transition: all 0.2s ease-in-out
 
-    .dropper, .dropper_projects
-        border: 2px solid rgba($orange, 1)
-        width: 30px
-        height: 99px
-        position: absolute
-        top: 39px
-        left: -33px
-        transform: rotate(30deg)
-        background-color: rgba($white, 1)
-        padding: 2px
+    // .dropper, .dropper_projects
+    //     border: 2px solid rgba($orange, 1)
+    //     width: 30px
+    //     height: 99px
+    //     position: absolute
+    //     top: 39px
+    //     left: -33px
+    //     transform: rotate(30deg)
+    //     background-color: rgba($white, 1)
+    //     padding: 2px
 
-    .dropper_projects
-        top: 74px
+    // .dropper_projects
+    //     top: 74px
 
     .heading
         font-size: calc(var(--font-size) + 14px)
-        line-height: 35px
+        // line-height: 35px
         font-family: $content
         border-bottom: 2px solid rgba($orange, 1)
         padding: 10px
         width: 75%
         padding-left: 30px
+        position: relative
+
+        .dropper
+            position: absolute
+            bottom: 20px
+            left: -10px
+            width: 30px
+            height: 99px
+            transform: rotate(30deg) translate(100%, 100%)
+            background-color: rgba($white, 1)
+            padding: 2px
+            border: 2px solid rgba($orange, 1)
+
+        .heading_text
+            text-overflow: ellipsis
+            width: calc(100% - 82px)
+            margin-left: 15px
+            display: inline-block
+            overflow: hidden
+            vertical-align: middle
+            white-space: nowrap
+            // height: 66px
 
         .logo
             display: inline-block
@@ -80,6 +102,8 @@
                 display: inline-block
                 width: calc(100% - 110px)
                 margin-right: 10px
+                font-size: var(--font-size)
+                vertical-align: middle
 
     hr
         border: none
@@ -96,7 +120,7 @@
                 width: calc(100% - 20px)
 
                 .slideshow
-                    
+
                     .img_wrap
                         text-align: center
 

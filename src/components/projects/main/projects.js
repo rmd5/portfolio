@@ -36,6 +36,7 @@ import te6 from "../../../img/te6.png";
 import te7 from "../../../img/te7.png";
 import Background from '../../parallax/background';
 import BackgroundMobile from '../../parallax/background_mobile';
+import openMenu from '../../menu/open_menu';
 
 class PROJECTS extends Component {
     constructor(props) {
@@ -67,13 +68,10 @@ class PROJECTS extends Component {
 
     render() {
         return (
-            <div className="main" id="main">
+            <div className="main" id="main" onClick={() => openMenu("close")}>
                 <div className="content">
                     <div style={{ position: "relative" }}>
                         <HEADER />
-                        <div className="link_to_other">
-                            Check out my <span onClick={() => this.change("/cv")}>CV<div className="arrow"><Icon.ArrowRightShort /></div></span>
-                        </div>
                     </div>
 
                     <div id="projects">
