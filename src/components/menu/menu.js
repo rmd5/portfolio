@@ -31,6 +31,13 @@ export default function Menu(props) {
         } catch (err) { }
     }
 
+    function setOrientation(pos) {
+        try {
+            localStorage.setItem("orientation", pos)
+            props.setOrientation(pos)
+        } catch (err) { }
+    }
+
     function change(page) {
         openMenu("close")
         if(document.getElementById("fade")) document.getElementById("fade").style.opacity = "0";
@@ -101,6 +108,12 @@ export default function Menu(props) {
                     <div className="menu_heading">Menu position</div>
                     <button className={props.position === "left" ? "active" : ""} onClick={() => setPosition("left")}>Left</button>
                     <button className={props.position === "right" ? "active" : ""} onClick={() => setPosition("right")}>Right</button>
+
+                    <div className="menu_heading">Page orientation</div>
+                    <button className={props.orientation === "up" ? "active" : ""} onClick={() => setOrientation("up")}>Upright</button>
+                    {/* <button className={props.orientation === "left" ? "active" : ""} onClick={() => setOrientation("left")}>Left</button>
+                    <button className={props.orientation === "right" ? "active" : ""} onClick={() => setOrientation("right")}>Right</button> */}
+                    <button className={props.orientation === "down" ? "active" : ""} onClick={() => setOrientation("down")}>Upside down</button>
                 </div>
             </div>
         </>

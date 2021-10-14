@@ -12,6 +12,7 @@ function App() {
 	const [theme, setTheme] = useState(localStorage.getItem("theme") || "light")
 	const [size, setSize] = useState(localStorage.getItem("size") || "small")
 	const [menuPosition, setMenuPosition] = useState(localStorage.getItem("position") || "right")
+	const [orientation, setOrientation] = useState(localStorage.getItem("orientation") || "up")
 
 	const [initial, setInitial] = useState(16)
 
@@ -20,6 +21,7 @@ function App() {
 			setTheme(localStorage.getItem("theme") || "light")
 			setSize(localStorage.getItem("size") || "small")
 			setMenuPosition(localStorage.getItem("position") || "right")
+			setOrientation(localStorage.getItem("orientation") || "up")
 		} catch (err) {
 			console.log("Could not fetch theme")
 		}
@@ -89,9 +91,18 @@ function App() {
 		document.getElementById("menu").style.display = "block"
 	}, [menuPosition])
 
+	useEffect(() => {
+		let root = document.documentElement.style
+		if (orientation === "up") root.setProperty("--rotation", "0deg")
+		else if (orientation === "left") root.setProperty("--rotation", "270deg")
+		else if (orientation === "right") root.setProperty("--rotation", "90deg")
+		else if (orientation === "down") root.setProperty("--rotation", "180deg")
+		document.getElementById("menu").style.display = "block"
+	}, [orientation])
+
 	return (
 		<div className="App" style={{ overflowY: "hidden", filter: theme === "mono-light" || theme === "mono-dark" ? "grayscale(1)" : "" }}>
-			<Menu theme={theme} setTheme={setTheme} size={size} setSize={setSize} position={menuPosition} setPosition={setMenuPosition} />
+			<Menu theme={theme} setTheme={setTheme} size={size} setSize={setSize} position={menuPosition} setPosition={setMenuPosition} orientation={orientation} setOrientation={setOrientation} />
 			<Router history={history}>
 				<Switch>
 					<Route exact path="/" component={LANDING} />
