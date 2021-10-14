@@ -33,7 +33,7 @@ export default function Menu(props) {
 
     function change(page) {
         openMenu("close")
-        document.getElementById("fade").style.opacity = "0";
+        if(document.getElementById("fade")) document.getElementById("fade").style.opacity = "0";
         setTimeout(function () {
             history.push("/" + page);
             setLink("/" + page)
