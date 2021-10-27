@@ -1,7 +1,6 @@
 import React from 'react';
 import history from '../../history';
 import snoop from "../../img/snoop.gif"
-import HEADER from '../header/header';
 import openMenu from '../menu/open_menu';
 import Background from '../parallax/background';
 import BackgroundMobile from '../parallax/background_mobile';
@@ -9,7 +8,6 @@ import gitlab from "../../img/gitlab.png"
 import github from "../../img/github.png"
 import linkedin from "../../img/linkedin.png"
 import email from "../../img/email.png"
-import * as Icon from "react-bootstrap-icons"
 
 export default function Lost(props) {
     function change(page) {

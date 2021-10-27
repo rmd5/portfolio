@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import * as Icon from "react-bootstrap-icons"
 import gitlab from "../../img/gitlab.png"
 import github from "../../img/github.png"
@@ -8,7 +8,7 @@ import history from '../../history';
 import openMenu from './open_menu';
 
 export default function Menu(props) {
-    const [link, setLink] = useState(window.location.pathname)
+    // const [link, setLink] = useState(window.location.pathname)
 
     function setTheme(theme) {
         try {
@@ -43,7 +43,7 @@ export default function Menu(props) {
         if(document.getElementById("fade")) document.getElementById("fade").style.opacity = "0";
         setTimeout(function () {
             history.push("/" + page);
-            setLink("/" + page)
+            // setLink("/" + page)
         }, 400);
     }
 

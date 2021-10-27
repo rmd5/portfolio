@@ -108,7 +108,6 @@ function App() {
 					<Route exact path="/" component={LANDING} />
 					<Route path="/cv" component={CV} />
 					<Route path="/projects" component={PROJECTS} />
-
 					<Route path="/" component={Lost} />
 				</Switch>
 			</Router>
