@@ -19,40 +19,63 @@ class PROJECTS_NAV extends Component {
     }
 
     checkId() {
-        if (this.isInView("TalentEd")) {
-            document.getElementById("talented_blob").style.visibility = "visible";
+        if (this.isInView("Yeah, sure!")) {
+            document.getElementById("yeahsure_blob").style.visibility = "visible";
+            document.getElementById("hop_blob").style.visibility = "";
+            document.getElementById("talented_blob").style.visibility = "";
             document.getElementById("tennis_blob").style.visibility = "";
             document.getElementById("this_blob").style.visibility = "";
             document.getElementById("bubble_blob").style.visibility = "";
             document.getElementById("maze_blob").style.visibility = "";
         } else {
-            document.getElementById("talented_blob").style.visibility = "";
+            document.getElementById("yeahsure_blob").style.visibility = "";
 
-            if (this.isInView("Strathdon.net")) {
-                document.getElementById("tennis_blob").style.visibility = "visible";
+            if (this.isInView("Hour of Power")) {
+                document.getElementById("hop_blob").style.visibility = "visible";
+                document.getElementById("talented_blob").style.visibility = "";
+                document.getElementById("tennis_blob").style.visibility = "";
                 document.getElementById("this_blob").style.visibility = "";
                 document.getElementById("bubble_blob").style.visibility = "";
                 document.getElementById("maze_blob").style.visibility = "";
             } else {
-                document.getElementById("tennis_blob").style.visibility = "";
+                document.getElementById("hop_blob").style.visibility = "";
 
-                if (this.isInView("This website")) {
-                    document.getElementById("this_blob").style.visibility = "visible";
+                if (this.isInView("TalentEd")) {
+                    document.getElementById("talented_blob").style.visibility = "visible";
+                    document.getElementById("tennis_blob").style.visibility = "";
+                    document.getElementById("this_blob").style.visibility = "";
                     document.getElementById("bubble_blob").style.visibility = "";
                     document.getElementById("maze_blob").style.visibility = "";
                 } else {
-                    document.getElementById("this_blob").style.visibility = "";
+                    document.getElementById("talented_blob").style.visibility = "";
 
-                    if (this.isInView("Bubble")) {
-                        document.getElementById("bubble_blob").style.visibility = "visible";
+                    if (this.isInView("Strathdon.net")) {
+                        document.getElementById("tennis_blob").style.visibility = "visible";
+                        document.getElementById("this_blob").style.visibility = "";
+                        document.getElementById("bubble_blob").style.visibility = "";
                         document.getElementById("maze_blob").style.visibility = "";
                     } else {
-                        document.getElementById("bubble_blob").style.visibility = "";
+                        document.getElementById("tennis_blob").style.visibility = "";
 
-                        if (this.isInView("Maze")) {
-                            document.getElementById("maze_blob").style.visibility = "visible";
-                        } else {
+                        if (this.isInView("This website")) {
+                            document.getElementById("this_blob").style.visibility = "visible";
+                            document.getElementById("bubble_blob").style.visibility = "";
                             document.getElementById("maze_blob").style.visibility = "";
+                        } else {
+                            document.getElementById("this_blob").style.visibility = "";
+
+                            if (this.isInView("Bubble")) {
+                                document.getElementById("bubble_blob").style.visibility = "visible";
+                                document.getElementById("maze_blob").style.visibility = "";
+                            } else {
+                                document.getElementById("bubble_blob").style.visibility = "";
+
+                                if (this.isInView("Maze")) {
+                                    document.getElementById("maze_blob").style.visibility = "visible";
+                                } else {
+                                    document.getElementById("maze_blob").style.visibility = "";
+                                }
+                            }
                         }
                     }
                 }
@@ -90,6 +113,24 @@ class PROJECTS_NAV extends Component {
             <div className="project_nav nav">
                 <div className="content">
                     <div className="scroll_monitor" style={{ backgroundImage: "linear-gradient(rgba(" + grey + ", 1) 0%, rgba(" + grey + ", 1) " + percent + ", rgba(" + orange + ", 1) " + percent + ", rgba(" + orange + ", 1) 100%)" }}></div>
+
+                    <div className="item_point" onClick={() => this.nav("Yeah, sure!")}>
+                        <div className="blob" id="yeahsure_blob"></div>
+                        <div className="item">
+                            Yeah, sure!
+                        </div>
+                    </div>
+
+                    <div className="connect"></div>
+
+                    <div className="item_point" onClick={() => this.nav("Hour of Power")}>
+                        <div className="blob" id="hop_blob"></div>
+                        <div className="item">
+                            Hour of Power
+                        </div>
+                    </div>
+
+                    <div className="connect"></div>
 
                     <div className="item_point" onClick={() => this.nav("TalentEd")}>
                         <div className="blob" id="talented_blob"></div>

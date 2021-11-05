@@ -38,6 +38,21 @@ import Background from '../../parallax/background';
 import BackgroundMobile from '../../parallax/background_mobile';
 import openMenu from '../../menu/open_menu';
 
+import ys1 from "../../../img/ys1.jpg";
+import ys2 from "../../../img/ys2.jpg";
+import ys3 from "../../../img/ys3.jpg";
+import ys4 from "../../../img/ys4.jpg";
+import ys5 from "../../../img/ys5.jpg";
+import lemon from "../../../img/lemon.svg";
+
+import hop1 from "../../../img/hop1.jpg";
+import hop2 from "../../../img/hop2.jpg";
+import hop3 from "../../../img/hop3.jpg";
+import hop4 from "../../../img/hop4.jpg";
+import hop5 from "../../../img/hop5.jpg";
+import hop6 from "../../../img/hop6.jpg";
+import hop from "../../../img/hourofpower.png";
+
 class PROJECTS extends Component {
     constructor(props) {
         super(props);
@@ -78,6 +93,38 @@ class PROJECTS extends Component {
                         <Background />
                         <BackgroundMobile />
                         <div id="fade">
+                            <PROJECT_SECTION slides={[ys1, ys2, ys3, ys4, ys5]} img={lemon} heading="Yeah, sure!" date="2021" stack={["Liquid", "Shopify", "CSS", "Javascript"]}
+                                text={<span>
+                                    Yeahsure is a website designed and created to sell the fresh lemonade sold by Max McCann
+                                    of <a href="https://mealswithmax.com" target="_blank">MealsWithMax</a> in partnership
+                                    with <a href="https://www.linkedin.com/in/ray5d/" target="_blank">Ray Rafiq</a>. The lemonade comes in three different
+                                    flavours; original lemonade, mint lemonade and honey lemonade, and they all look absolutely delicious (my totally unbiased opinion).
+                                    <br /><br />
+                                    I created the website on Shopify, a site that handles all of the eCommerce side of the site, using their
+                                    own modelling language, Liquid.
+                                </span>}
+                                link="https://yeahsure.co.uk"
+                            />
+
+                            <PROJECT_SECTION slides={[hop1, hop2, hop3, hop4, hop5, hop6]} img={hop} heading="Hour of Power" date="2021" stack={["React Native", "Expo", "Node.js", "Express.js", "SASS"]}
+                                text={<span>
+                                    In collaboration with <a href="https://www.linkedin.com/in/ray5d/" target="_blank">Ray Rafiq</a>, I have created a management app
+                                    to help Ray manage his large network. It allows for the uploading of contacts, either from the mobile contacts, through a csv or directly through
+                                    the app, it stores each contact, along with information on how you know them and how often you'd like to contact them, and it will then remind you
+                                    to contact each person when they are due to be contacted.
+                                    <br /><br />
+                                    I have utilised techniques that allow for the management of large amounts of data (Ray knows a lot of people... a lot), such as personalised
+                                    sorting algorithms, custom lazy loading methods and both dynamic searching and filtering.
+                                    <br /><br />
+                                    I'm also very proud of the login process. A unique ID is assigned to each device, and then each device needs to be linked
+                                    to a phone number. This way, multiple devices can be added to the same account easily, and automatically allows for single sign-on
+                                    by verifying the unique ID stored in the device.
+                                    <br /><br />
+                                    This app is still in development, and will be on both the play store and the app store soon.
+                                </span>}
+                                link="https://expo.dev/@rmd5/hour_of_power"
+                            />
+
                             <PROJECT_SECTION slides={[te1, te2, te3, te4, te5, te6, te7]} img={talented} heading="TalentEd" date="2020 - 2021" stack={["React.js", "SASS", "AWS Amplify", "GraphQL", "DynamoDB", "AWS S3"]}
                                 text={<span>TalentEd is a web app that looked at improving the employability of Rohingya refugees in Malaysia.
                                     In collaboration with the UNHCR and Aspire Penang, the app was developed with a focus on providing refugees
@@ -110,12 +157,13 @@ class PROJECTS extends Component {
 
                             <PROJECT_SECTION slides={[bubble1, bubble2, bubble3, bubble4]} img={bubble} git="https://gitlab.com/Mcgregor381/bubble" heading="Bubble" date="2019 - 2020" stack={["HTML5", "PHP", "Javascript", "CSS3", "JQuery"]}
                                 text={<span>With a team of 6 people in a university project, we created an application that allows for the control of smart devices within the home.
-                                    It is possible to set timers, review statistics of the home, and toggle individual devices, whole rooms, or the entire house.</span>}
+                                    It is possible to set timers, review statistics of the home, and toggle individual devices, whole rooms, or the entire house.
+                                    Unfortunately, the server for this site has been taken down and the database deleted, so it isn't possible to access the app anymore.</span>}
                             // link="http://bubble.rorydobson.com/"
                             />
 
                             <PROJECT_SECTION slides={[maze1, maze2, maze3, maze4, maze5]} img={maze} git="https://gitlab.com/rmd5/maze" heading="Maze" date="2020" stack={["HTML5", "Javascript", "CSS3"]}
-                                text={<span>Small maze game I created as a hobby. The aim is to get through the maze using a series of buttons.</span>}
+                                text={<span>Small maze game I created as a hobby. The aim is to get through the maze using a series of buttons. Unfortunately this project iss no longer live, but I intend to get it up and running again soon.</span>}
                             // link="https://rorydobson.com/maze"
                             />
 
