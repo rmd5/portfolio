@@ -46,7 +46,7 @@ function HEADER(props) {
                             {/* <i class="fab fa-linkedin"></i> */}
                             <img className="contact_img" src={linkedin} alt="linkedin" />
                         </a>
-                        <a className="icon" href="mailto:rory.dobson@yahoo.com">
+                        <a className="icon" href="mailto:hello@rorydobson.com">
                             {/* <i class="far fa-envelope"></i> */}
                             <img className="contact_img" src={email} alt="email" />
                         </a>
