@@ -96,8 +96,8 @@ class PROJECTS extends Component {
                             <PROJECT_SECTION slides={[ys1, ys2, ys3, ys4, ys5]} img={lemon} heading="Yeah, sure!" date="2021" stack={["Liquid", "Shopify", "CSS", "Javascript"]}
                                 text={<span>
                                     Yeahsure is a website designed and created to sell the fresh lemonade sold by Max McCann
-                                    of <a href="https://mealswithmax.com" target="_blank">MealsWithMax</a> in partnership
-                                    with <a href="https://www.linkedin.com/in/ray5d/" target="_blank">Ray Rafiq</a>. The lemonade comes in three different
+                                    of <a href="https://mealswithmax.com" target="_blank" rel="noreferrer">MealsWithMax</a> in partnership
+                                    with <a href="https://www.linkedin.com/in/ray5d/" target="_blank" rel="noreferrer">Ray Rafiq</a>. The lemonade comes in three different
                                     flavours; original lemonade, mint lemonade and honey lemonade, and they all look absolutely delicious (my totally unbiased opinion).
                                     <br /><br />
                                     I created the website on Shopify, a site that handles all of the eCommerce side of the site, using their
@@ -108,7 +108,7 @@ class PROJECTS extends Component {
 
                             <PROJECT_SECTION slides={[hop1, hop2, hop3, hop4, hop5, hop6]} img={hop} heading="Hour of Power" date="2021" stack={["React Native", "Expo", "Node.js", "Express.js", "SASS"]}
                                 text={<span>
-                                    In collaboration with <a href="https://www.linkedin.com/in/ray5d/" target="_blank">Ray Rafiq</a>, I have created a management app
+                                    In collaboration with <a href="https://www.linkedin.com/in/ray5d/" target="_blank" rel="noreferrer">Ray Rafiq</a>, I have created a management app
                                     to help Ray manage his large network. It allows for the uploading of contacts, either from the mobile contacts, through a csv or directly through
                                     the app, it stores each contact, along with information on how you know them and how often you'd like to contact them, and it will then remind you
                                     to contact each person when they are due to be contacted.
