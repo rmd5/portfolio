@@ -6,9 +6,9 @@ import settings from './settings';
 
 class PROJECT_SECTION extends Component {
     componentDidMount() {
-        this.fadeIn(this.props.heading)
+        this.fadeIn(this.props.id)
         document.getElementById("main").addEventListener("scroll", e => {
-            this.fadeIn(this.props.heading)
+            this.fadeIn(this.props.id)
         });
     }
 
@@ -27,7 +27,7 @@ class PROJECT_SECTION extends Component {
 
     render() {
         return (
-            <div className="section" id={this.props.heading} style={{ opacity: "0", transform: "translate(0, 100px)" }}>
+            <div className="section" id={this.props.id} style={{ opacity: "0", transform: "translate(0, 100px)" }}>
                 <div className="heading" style={{ height: "70px" }}>
                     {this.props.img ? <img className="logo" src={this.props.img} alt="Logo"></img> : null} 
                     <div className="heading_text">{this.props.heading}</div>

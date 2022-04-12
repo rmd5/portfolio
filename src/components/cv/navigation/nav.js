@@ -158,9 +158,9 @@ class NAV extends Component {
         );
     }
 
-    componentWillUnmount() {
-        document.getElementById("main").removeEventListener("scroll", () => this.checkId());
-    }
+    // componentWillUnmount() {
+    //     document.getElementById("main").removeEventListener("scroll", () => this.checkId());
+    // }
 }
 
 export default NAV;

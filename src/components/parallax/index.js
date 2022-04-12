@@ -9,9 +9,9 @@ function Parallax(props) {
             target.style.top = "calc(" + props.top + " + " + yvalue + "px)"
         })
 
-        return () => {
-            document.getElementById("main").removeEventListener('scroll', () => { })
-        }
+        // return () => {
+        //     document.getElementById("main").removeEventListener('scroll', () => { })
+        // }
     }, [props.id, props.factor, props.top])
 
     return <div id={props.id} style={{ width: props.width, height: props.height, zIndex: "-1", position: "absolute", top: props.top, left: props.left, transform: "rotate(" + props.rotate + ")" }}>

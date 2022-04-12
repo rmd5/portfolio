@@ -19,66 +19,13 @@ class PROJECTS_NAV extends Component {
     }
 
     checkId() {
-        if (this.isInView("Yeah, sure!")) {
-            document.getElementById("yeahsure_blob").style.visibility = "visible";
-            document.getElementById("hop_blob").style.visibility = "";
-            document.getElementById("talented_blob").style.visibility = "";
-            document.getElementById("tennis_blob").style.visibility = "";
-            document.getElementById("this_blob").style.visibility = "";
-            document.getElementById("bubble_blob").style.visibility = "";
-            document.getElementById("maze_blob").style.visibility = "";
-        } else {
-            document.getElementById("yeahsure_blob").style.visibility = "";
-
-            if (this.isInView("Hour of Power")) {
-                document.getElementById("hop_blob").style.visibility = "visible";
-                document.getElementById("talented_blob").style.visibility = "";
-                document.getElementById("tennis_blob").style.visibility = "";
-                document.getElementById("this_blob").style.visibility = "";
-                document.getElementById("bubble_blob").style.visibility = "";
-                document.getElementById("maze_blob").style.visibility = "";
-            } else {
-                document.getElementById("hop_blob").style.visibility = "";
-
-                if (this.isInView("TalentEd")) {
-                    document.getElementById("talented_blob").style.visibility = "visible";
-                    document.getElementById("tennis_blob").style.visibility = "";
-                    document.getElementById("this_blob").style.visibility = "";
-                    document.getElementById("bubble_blob").style.visibility = "";
-                    document.getElementById("maze_blob").style.visibility = "";
-                } else {
-                    document.getElementById("talented_blob").style.visibility = "";
-
-                    if (this.isInView("Strathdon.net")) {
-                        document.getElementById("tennis_blob").style.visibility = "visible";
-                        document.getElementById("this_blob").style.visibility = "";
-                        document.getElementById("bubble_blob").style.visibility = "";
-                        document.getElementById("maze_blob").style.visibility = "";
-                    } else {
-                        document.getElementById("tennis_blob").style.visibility = "";
-
-                        if (this.isInView("This website")) {
-                            document.getElementById("this_blob").style.visibility = "visible";
-                            document.getElementById("bubble_blob").style.visibility = "";
-                            document.getElementById("maze_blob").style.visibility = "";
-                        } else {
-                            document.getElementById("this_blob").style.visibility = "";
-
-                            if (this.isInView("Bubble")) {
-                                document.getElementById("bubble_blob").style.visibility = "visible";
-                                document.getElementById("maze_blob").style.visibility = "";
-                            } else {
-                                document.getElementById("bubble_blob").style.visibility = "";
-
-                                if (this.isInView("Maze")) {
-                                    document.getElementById("maze_blob").style.visibility = "visible";
-                                } else {
-                                    document.getElementById("maze_blob").style.visibility = "";
-                                }
-                            }
-                        }
-                    }
-                }
+        let arr = ["eldenring", "yeahsure", "hop", "talented", "this", "bubble", "maze"].reverse()
+        for(let i = 0; i < arr.length; i++) {
+            if(this.isInView(arr[i])) {
+                document.getElementById(arr[i] + "_blob").style.visibility = "visible";
+                arr.filter(e => e !== arr[i]).forEach(e => {
+                    document.getElementById(e + "_blob").style.visibility = "";
+                })
             }
         }
     }
@@ -114,7 +61,16 @@ class PROJECTS_NAV extends Component {
                 <div className="content">
                     <div className="scroll_monitor" style={{ backgroundImage: "linear-gradient(rgba(" + grey + ", 1) 0%, rgba(" + grey + ", 1) " + percent + ", rgba(" + orange + ", 1) " + percent + ", rgba(" + orange + ", 1) 100%)" }}></div>
 
-                    <div className="item_point" onClick={() => this.nav("Yeah, sure!")}>
+                    <div className="item_point" onClick={() => this.nav("eldenring")}>
+                        <div className="blob" id="eldenring_blob"></div>
+                        <div className="item">
+                            Elden Ring
+                        </div>
+                    </div>
+
+                    <div className="connect"></div>
+
+                    <div className="item_point" onClick={() => this.nav("yeahsure")}>
                         <div className="blob" id="yeahsure_blob"></div>
                         <div className="item">
                             Yeah, sure!
@@ -123,7 +79,7 @@ class PROJECTS_NAV extends Component {
 
                     <div className="connect"></div>
 
-                    <div className="item_point" onClick={() => this.nav("Hour of Power")}>
+                    <div className="item_point" onClick={() => this.nav("hop")}>
                         <div className="blob" id="hop_blob"></div>
                         <div className="item">
                             Hour of Power
@@ -132,25 +88,25 @@ class PROJECTS_NAV extends Component {
 
                     <div className="connect"></div>
 
-                    <div className="item_point" onClick={() => this.nav("TalentEd")}>
+                    <div className="item_point" onClick={() => this.nav("talented")}>
                         <div className="blob" id="talented_blob"></div>
                         <div className="item">
                             TalentEd
                         </div>
                     </div>
 
-                    <div className="connect"></div>
+                    {/* <div className="connect"></div>
 
                     <div className="item_point" onClick={() => this.nav("Strathdon.net")}>
                         <div className="blob" id="tennis_blob"></div>
                         <div className="item">
                             Strathdon.net
                         </div>
-                    </div>
+                    </div> */}
 
                     <div className="connect"></div>
 
-                    <div className="item_point" onClick={() => this.nav("This website")}>
+                    <div className="item_point" onClick={() => this.nav("this")}>
                         <div className="blob" id="this_blob"></div>
                         <div className="item">
                             This website
@@ -159,7 +115,7 @@ class PROJECTS_NAV extends Component {
 
                     <div className="connect"></div>
 
-                    <div className="item_point" onClick={() => this.nav("Bubble")}>
+                    <div className="item_point" onClick={() => this.nav("bubble")}>
                         <div className="blob" id="bubble_blob"></div>
                         <div className="item">
                             Bubble
@@ -168,7 +124,7 @@ class PROJECTS_NAV extends Component {
 
                     <div className="connect"></div>
 
-                    <div className="item_point" onClick={() => this.nav("Maze")}>
+                    <div className="item_point" onClick={() => this.nav("maze")}>
                         <div className="blob" id="maze_blob"></div>
                         <div className="item">
                             Maze
@@ -179,9 +135,9 @@ class PROJECTS_NAV extends Component {
         );
     }
 
-    componentWillUnmount() {
-        document.getElementById("main").removeEventListener("scroll", () => this.checkId());
-    }
+    // componentWillUnmount() {
+    //     document.getElementById("main").removeEventListener("scroll", () => this.checkId());
+    // }
 }
 
 export default PROJECTS_NAV;

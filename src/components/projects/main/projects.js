@@ -8,9 +8,17 @@ import talented from "../../../img/talented.svg";
 import bubble from "../../../img/bubble.png";
 import maze from "../../../img/maze.png";
 import profile from "../../../img/profile_round.png";
-import ball from "../../../img/ball.png"
+// import ball from "../../../img/ball.png"
+import eldenring from "../../../img/eldenring.png"
 
 import PROJECTS_NAV from '../nav/nav';
+
+import er1 from "../../../img/er1.png"
+import er2 from "../../../img/er2.png"
+import er3 from "../../../img/er3.png"
+import er4 from "../../../img/er4.png"
+import er5 from "../../../img/er5.png"
+import er6 from "../../../img/er6.png"
 
 import maze1 from "../../../img/maze1.png";
 import maze2 from "../../../img/maze2.png";
@@ -18,9 +26,9 @@ import maze3 from "../../../img/maze3.png";
 import maze4 from "../../../img/maze4.png";
 import maze5 from "../../../img/maze5.png";
 
-import tennis1 from "../../../img/tennis1.png"
-import tennis2 from "../../../img/tennis2.png"
-import tennis3 from "../../../img/tennis3.png"
+// import tennis1 from "../../../img/tennis1.png"
+// import tennis2 from "../../../img/tennis2.png"
+// import tennis3 from "../../../img/tennis3.png"
 
 import bubble1 from "../../../img/bubble1.png";
 import bubble2 from "../../../img/bubble2.png";
@@ -93,7 +101,40 @@ class PROJECTS extends Component {
                         <Background />
                         <BackgroundMobile />
                         <div id="fade">
-                            <PROJECT_SECTION slides={[ys1, ys2, ys3, ys4, ys5]} img={lemon} heading="Yeah, sure!" date="2021" stack={["Liquid", "Shopify", "CSS", "Javascript"]}
+                            <PROJECT_SECTION id="eldenring" slides={[er1, er2, er3, er4, er5, er6]} img={eldenring} heading="Elden Ring Web Tools" date="2022" stack={["React", "SASS", "A large amount of data"]}
+                                text={<span>
+                                    This website has received a lot of attention, having amassed 12,000 users in the past month. Each day, a further 800 - 1000 users are using the site.
+                                    Statistics correct as of 11/4/2022.
+                                    <br /><br />
+                                    Released in February 2022, <a href="https://en.bandainamcoent.eu/elden-ring/elden-ring" target="_blank" rel="noreferrer">Elden Ring</a> has a huge player base. The game itself is relatively complex, and doesn't give much context for a lot of calculations.
+                                    In order to help with this, I created a few different calculators.
+                                    <ul>
+                                        <li><b><a href="https://eldenring.rorydobson.com/rune-calculator" target="_blank" rel="noreferrer">Rune Calculator</a></b> - Calculate the number of runes needed to jump between levels.</li>
+                                        <li>
+                                            <b><a href="https://eldenring.rorydobson.com/build-calculator" target="_blank" rel="noreferrer">Build Calculator</a></b> - Enter your desired stats and this calculator will tell you the optimal class to start with.
+                                            You can also compare with other classes, so that you can make a more informed decision about your starting class.
+                                        </li>
+                                        <li>
+                                            <b><a href="https://eldenring.rorydobson.com/weapon-calculator" target="_blank" rel="noreferrer">Weapon Calculator</a></b> - This calculator has two features, and is the most popular:
+                                            <ul>
+                                                <li>
+                                                    Enter your build, and then choose your desired weapon, affinity and level to view the stats of a particular weapon build.
+                                                    It is then possible to compare as many weapons as desired by simply adding more weapons to the list.
+                                                </li>
+                                                <li>
+                                                    Enter your build, and then have the calculator calculate the optimal weapon for you. This will scan through all 68,000+ weapon
+                                                    combinations to decide the best one, with the highest attack rating. These can be filtered and changed to find a weapon at your
+                                                    desired level, or with specific damage types.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><b><a href="https://eldenring.rorydobson.com/consumables-calculator" target="_blank" rel="noreferrer">Consumables Calculator</a></b> - Enter all the consumables that you have in your inventory, and this calculator will tell you the total amount of runes you hold.</li>
+                                    </ul>
+                                </span>}
+                                link="https://eldenring.rorydobson.com"
+                            />
+
+                            <PROJECT_SECTION id="yeahsure" slides={[ys1, ys2, ys3, ys4, ys5]} img={lemon} heading="Yeah, sure!" date="2021" stack={["Liquid", "Shopify", "CSS", "Javascript"]}
                                 text={<span>
                                     Yeahsure is a website designed and created to sell the fresh lemonade sold by Max McCann
                                     of <a href="https://mealswithmax.com" target="_blank" rel="noreferrer">MealsWithMax</a> in partnership
@@ -106,7 +147,7 @@ class PROJECTS extends Component {
                                 link="https://yeahsure.co.uk"
                             />
 
-                            <PROJECT_SECTION slides={[hop1, hop2, hop3, hop4, hop5, hop6]} img={hop} heading="Hour of Power" date="2021" stack={["React Native", "Expo", "Node.js", "Express.js", "SASS"]}
+                            <PROJECT_SECTION id="hop" slides={[hop1, hop2, hop3, hop4, hop5, hop6]} img={hop} heading="Hour of Power" date="2021" stack={["React Native", "Expo", "Node.js", "Express.js", "SASS"]}
                                 text={<span>
                                     In collaboration with <a href="https://www.linkedin.com/in/ray5d/" target="_blank" rel="noreferrer">Ray Rafiq</a>, I have created a management app
                                     to help Ray manage his large network. It allows for the uploading of contacts, either from the mobile contacts, through a csv or directly through
@@ -125,11 +166,12 @@ class PROJECTS extends Component {
                                 link="https://expo.dev/@rmd5/hour_of_power"
                             />
 
-                            <PROJECT_SECTION slides={[te1, te2, te3, te4, te5, te6, te7]} img={talented} heading="TalentEd" date="2020 - 2021" stack={["React.js", "SASS", "AWS Amplify", "GraphQL", "DynamoDB", "AWS S3"]}
+                            <PROJECT_SECTION id="talented" slides={[te1, te2, te3, te4, te5, te6, te7]} img={talented} heading="TalentEd" date="2020 - 2021" stack={["React.js", "SASS", "AWS Amplify", "GraphQL", "DynamoDB", "AWS S3"]}
                                 text={<span>TalentEd is a web app that looked at improving the employability of Rohingya refugees in Malaysia.
                                     In collaboration with the UNHCR and Aspire Penang, the app was developed with a focus on providing refugees
-                                    with a platform on which they can trade and learn skills. This project was completed for my final year dissertation
-                                    and earned me the Cooper-Walker Engineering Ltd Prize for outstanding project work.
+                                    with a platform on which they can trade and learn skills. This project was completed for my final year dissertation,
+                                    and earned me the Cooper-Walker Engineering Ltd Prize for outstanding project work and a nomination for the Young Software
+                                    Engineer of the Year 2021 award.
                                     <br /><br />
                                     Particular care was taken over the language translations and accessibility for those unable to read. Translations for text
                                     was provided in five different languages, and there was a text-to-speech feature for all written text throughout the app.
@@ -138,15 +180,15 @@ class PROJECTS extends Component {
                                 link="https://talent-ed.app"
                             />
 
-                            <PROJECT_SECTION slides={[tennis1, tennis2, tennis3]} img={ball} heading="Strathdon.net" date="2021" stack={["React.js", "SASS"]}
+                            {/* <PROJECT_SECTION slides={[tennis1, tennis2, tennis3]} img={ball} heading="Strathdon.net" date="2021" stack={["React.js", "SASS"]}
                                 text={<span>
                                     For my community, I created a website for the local tennis court. It consists of a booking process, contacts, location and access to the community donation page.
                                     Growing up, I used the tennis court a lot, and I wanted to make it easier to use so that it could get the customer engagement it deserved (it's a really awesome tennis court!).
                                 </span>}
                                 link="https://strathdontennis.pages.dev"
-                            />
+                            /> */}
 
-                            <PROJECT_SECTION img={profile} git="https://gitlab.com/rmd5/portfolio" heading="This website" date="2020 - 2021" stack={["React.js", "SASS", "AWS Amplify"]}
+                            <PROJECT_SECTION id="this" img={profile} git="https://gitlab.com/rmd5/portfolio" heading="This website" date="2020 - 2021" stack={["React.js", "SASS", "Cloudflare", "AWS Amplify (Moved to Cloudflare)"]}
                                 text={<span>
                                     This website was created to reflect my experience and achievements. It was created with React.js and hosted on AWS Amplify.
                                     The front page was animated so that it would seemlessly blend into either the "CV" page or the "Projects" page when the buttons were clicked.
@@ -155,14 +197,14 @@ class PROJECTS extends Component {
                                 </span>}
                             />
 
-                            <PROJECT_SECTION slides={[bubble1, bubble2, bubble3, bubble4]} img={bubble} git="https://gitlab.com/Mcgregor381/bubble" heading="Bubble" date="2019 - 2020" stack={["HTML5", "PHP", "Javascript", "CSS3", "JQuery"]}
+                            <PROJECT_SECTION id="bubble" slides={[bubble1, bubble2, bubble3, bubble4]} img={bubble} git="https://gitlab.com/Mcgregor381/bubble" heading="Bubble" date="2019 - 2020" stack={["HTML5", "PHP", "Javascript", "CSS3", "JQuery"]}
                                 text={<span>With a team of 6 people in a university project, we created an application that allows for the control of smart devices within the home.
                                     It is possible to set timers, review statistics of the home, and toggle individual devices, whole rooms, or the entire house.
                                     Unfortunately, the server for this site has been taken down and the database deleted, so it isn't possible to access the app anymore.</span>}
                             // link="http://bubble.rorydobson.com/"
                             />
 
-                            <PROJECT_SECTION slides={[maze1, maze2, maze3, maze4, maze5]} img={maze} git="https://gitlab.com/rmd5/maze" heading="Maze" date="2020" stack={["HTML5", "Javascript", "CSS3"]}
+                            <PROJECT_SECTION id="maze" slides={[maze1, maze2, maze3, maze4, maze5]} img={maze} git="https://gitlab.com/rmd5/maze" heading="Maze" date="2020" stack={["HTML5", "Javascript", "CSS3"]}
                                 text={<span>Small maze game I created as a hobby. The aim is to get through the maze using a series of buttons. Unfortunately this project iss no longer live, but I intend to get it up and running again soon.</span>}
                             // link="https://rorydobson.com/maze"
                             />
@@ -178,7 +220,7 @@ class PROJECTS extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
         );
     }
 }

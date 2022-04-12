@@ -17,7 +17,8 @@ class BIO extends Component {
                         I have a passion for problem solving and mathematics, and love applying that passion through the use of the MERN stack.
                         <br /><br />
                         I have been nominated for the Young Software Engineer of the year award 2021 by Heriot Watt University.
-                        For my dissertation, looking at increasing the employability of Rohingya refugees in Malaysia, I’m really proud to say that I won the Cooper-Walker Engineering Ltd prize for outstanding project work.
+                        For my dissertation, looking at increasing the employability of Rohingya refugees in Malaysia, I'm really proud to say that I won the Cooper-Walker Engineering Ltd prize for outstanding project work, 
+                        and was nominated for the Young Software Engineer of the Year 2021 award by Heriot Watt University.
                     </div>
                 </div>
             </div>
