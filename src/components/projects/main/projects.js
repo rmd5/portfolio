@@ -4,6 +4,8 @@ import * as Icon from "react-bootstrap-icons";
 import history from '../../../history';
 import PROJECT_SECTION from '../section/section';
 
+import dailyjam from "../../../img/dailyjam.png"
+
 import talented from "../../../img/talented.svg";
 import bubble from "../../../img/bubble.png";
 import maze from "../../../img/maze.png";
@@ -101,6 +103,12 @@ class PROJECTS extends Component {
                         <Background />
                         <BackgroundMobile />
                         <div id="fade">
+                            <PROJECT_SECTION id="eldenring" img={dailyjam} heading="Daily Jam" date="2023" stack={["React", "SASS", "Node", "Express", "Spotify"]}
+                                text={<span>
+                                    Get your day started with some smoooth jams on toast
+                                </span>}
+                            />
+
                             <PROJECT_SECTION id="eldenring" slides={[er1, er2, er3, er4, er5, er6]} img={eldenring} heading="Elden Ring Web Tools" date="2022" stack={["React", "SASS", "A large amount of data"]}
                                 text={<span>
                                     This website has received a lot of attention, having amassed 12,000 users in the past month. Each day, a further 800 - 1000 users are using the site.
